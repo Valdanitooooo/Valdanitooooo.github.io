@@ -1,0 +1,22 @@
+/**
+ * for default page.
+ */
+$(document).ready(function(){
+	var backToTop = $(".back-to-top");
+	var infoBanner = $("#info-banner");
+	var navBanner = $("#nav-banner");
+	// back to top
+	backToTop.hide();
+	backToTop.click(function(){
+		$("html, body").animate({scrollTop:0}, "fast");
+	});
+	var topHeight = infoBanner.height();
+	$(window).scroll(function(){
+		if($(window).scrollTop() >= topHeight){
+			navBanner.addClass("nav-scroll");
+		}else{
+			navBanner.removeClass("nav-scroll");
+		}
+		
+	});
+});
