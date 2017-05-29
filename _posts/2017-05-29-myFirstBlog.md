@@ -3,7 +3,7 @@ layout: post
 title: 我的第一篇博客
 categories: 学习
 tags: 博客
-comments: false
+comments: no
 ---
 
 端午节假期的前两天研究了一下用GitHub搭建个人网站，觉得挺有趣的。
