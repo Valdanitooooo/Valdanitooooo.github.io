@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 访问WEB-INF下jsp的几种方式
+title: 访问WEB-INF目录下jsp的几种方式
 categories: 开发
 tags: WEB-INF jsp springmvc
 comments: no
