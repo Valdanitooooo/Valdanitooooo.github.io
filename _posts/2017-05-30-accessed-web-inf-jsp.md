@@ -21,28 +21,28 @@ WEB-INF是安全目录，没法通过地址栏直接访问，下面我来总结�
 # 在web.xml中配置servlet
 也是比较传统的做法。
 {% highlight xml linenos %}
-    <servlet>
-      <servlet-name>goto_index</servlet-name>
-      <jsp-file>/WEB-INF/index.jsp</jsp-file>
-    </servlet>
-    <servlet-mapping>
-      <servlet-name>goto_index</servlet-name>
-      <url-pattern>/index</url-pattern>
-    </servlet-mapping>
+  <servlet>
+    <servlet-name>goto_index</servlet-name>
+    <jsp-file>/WEB-INF/index.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>goto_index</servlet-name>
+    <url-pattern>/index</url-pattern>
+  </servlet-mapping>
 {% endhighlight %}
 
 # 使用<jsp:forward>标签
 重定向一个HTML文件，JSP文件，或者是一个程序段。不优雅，不推荐。
 {% highlight html linenos %}
-  <jsp:forward page = "/WEB-INF/index.jsp" />
+<jsp:forward page="/WEB-INF/index.jsp" />
 {% endhighlight %}
 
 # jsp也是servlet
 还是一个字，不优雅。
 {% highlight html linenos %}
-  <%
-    request.getRequestDispatcher("/index").forward(request, response);
-  %>
+<%
+  request.getRequestDispatcher("/index").forward(request, response);
+%>
 {% endhighlight %}
 
 #在springmvc中使用mvc:view-controller标签
