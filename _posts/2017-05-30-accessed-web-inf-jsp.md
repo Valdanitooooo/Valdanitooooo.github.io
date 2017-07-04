@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 访问WEB-INF目录下jsp的几种方式
+title: 优雅的跳转页面
 categories: 开发
 tags: WEB-INF jsp springmvc
 comments: no
