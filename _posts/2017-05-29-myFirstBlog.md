@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 我的第一篇博客
-categories: 闲扯
+categories: Valdanito
 tags:
 comments: true
 ---

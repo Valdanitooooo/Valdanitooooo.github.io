@@ -2,7 +2,7 @@
 layout: post
 title: 在Centos7上搭建Ldap服务器
 categories: 开发
-tags: LDAP Centos7
+tags: LDAP Centos
 comments: true
 ---
 

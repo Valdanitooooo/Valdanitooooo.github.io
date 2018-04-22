@@ -5,9 +5,12 @@ name: Valdanito
 author: Valdanito
 email: valdanito@qq.com
 gitment: true
-weibo: 2075704727
+#weibo:
 github: Valdanitooooo
 highlighter: rouge
-safe: true
-ipaginate: 20
+gems: [jekyll-paginate]
+safe: false
+paginate: 10
+paginate_path: '/index/page:num/'
+#ipaginate: 20
 port: 3999

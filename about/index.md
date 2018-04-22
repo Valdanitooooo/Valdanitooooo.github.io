@@ -4,11 +4,12 @@ layout: page
 comments: no
 ---
 
-Hello World！
+## Hello World！
+这是我的个人博客，也可以认为是个在线笔记，记录所学所想所感。
 
 ----
 
-###联系方式：
+### 联系方式：
 
 {% if site.qq %}
 ＱＱ：[{{ site.qq }}](tencent://message/?uin={{ site.qq }})
@@ -18,9 +19,3 @@ Hello World！
 邮箱：[{{ site.email }}](mailto:{{ site.email }})
 
 GitHub : [http://github.com/{{ site.github }}](http://github.com/{{ site.github }})
-
-----
-
-{% if site.weibo %}
-[![新浪微博](http://service.t.sina.com.cn/widget/qmd/{{ site.weibo }}/f78fbcd2/1.png)](http://weibo.com/u/{{ site.weibo }})
-{% endif %}

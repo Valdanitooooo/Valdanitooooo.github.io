@@ -2,7 +2,7 @@
 layout: post
 title: SpringMvc框架实现优雅的页面跳转
 categories: 开发
-tags: WEB-INF jsp springmvc
+tags: java springmvc
 comments: true
 ---
 

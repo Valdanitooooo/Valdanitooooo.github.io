@@ -2,7 +2,7 @@
 layout: post
 title: 正确的理解LDAP中的ObjectClass和Attribute
 categories: 开发
-tags: LDAP Centos7
+tags: LDAP
 comments: true
 ---
 
