@@ -3,7 +3,7 @@ layout: post
 title: 正确的理解LDAP中的ObjectClass和Attribute
 categories: 开发
 tags: LDAP Centos7
-comments: no
+comments: true
 ---
 
 # 前言
@@ -31,7 +31,7 @@ comments: no
 
 简单描述就是:
 	抽象型ObjectClass只用来被其它ObjectClass继承，只有当其被结构型ObjectClass继承时才出现。
-	要定义一个Entry必须有且只有一个结构型的ObjectClass。 
+	要定义一个Entry必须有且只有一个结构型的ObjectClass。
 	Top是一个顶级抽象型ObjectClass，里面定义了一个MUST Attribute：ObjectClass，这就决定了必须有一个其它的结构型ObjectClass才能定义一个Entry.	其中ObjectClass又可以存在继承关系，该继承关系于Java中有点相似，子ObjectClass会继承父ObjectClass中的全部Attributes.
 objectClass有着严格的等级之分，最顶层是top和alias。例如，organizationalPerson这个ObjectClass就隶属于person，而person又隶属于top。
 
@@ -50,7 +50,7 @@ objectclass ( 2.5.6.0 NAME 'top' ABSTRACT
     MUST objectClass )
 objectclass ( 1.3.6.1.4.1.1466.344 NAME 'dcObject'
     DESC 'RFC2247: domain component object'
-    SUP top AUXILIARY 
+    SUP top AUXILIARY
     MUST dc )
 ```
 
@@ -63,14 +63,14 @@ dc: java.com
 
 要定义这个Entry必须找到一个STRUCTURAL类型的ObjectClass。
 ```shell
-objectClasses: ( 2.5.6.4 NAME 'organization' 
+objectClasses: ( 2.5.6.4 NAME 'organization'
   DESC 'RFC2256: an organization' SUP top STRUCTURAL
-  MUST o 
-  MAY ( userPassword $ searchGuide $ seeAlso $ businessCategory 
+  MUST o
+  MAY ( userPassword $ searchGuide $ seeAlso $ businessCategory
    $ x121Address $ registeredAddress $ destinationIndicator
    $ preferredDeliveryMethod $ telexNumber $ teletexTerminalIdentifier
    $ telephoneNumber $ internationaliSDNNumber $ facsimileTelephoneNumber
-   $ street $ postOfficeBox $ postalCode $ postalAddress 
+   $ street $ postOfficeBox $ postalCode $ postalAddress
    $ physicalDeliveryOfficeName $ st $ l $ description ) )
 ```
 
@@ -89,4 +89,3 @@ o: java.com
 
 ### 参考资料：
 [Appendix E: LDAP - Object Classes and Attributes](http://www.zytrax.com/books/ldap/ape/)
-
