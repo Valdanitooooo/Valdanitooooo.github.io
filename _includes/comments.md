@@ -1,18 +1,17 @@
-{% if site.duoshuo %}
-	{% if page.id %}
-	<div class="ds-thread" data-thread-key="{{ page.id }}" data-url="{{ site.url }}{{ page.url }}" data-title="{{ page.title }}" />
-	{% else %}
-	<div class="ds-thread" data-thread-key="{{ site.url }}{{ page.url }}" />
-	{% endif %}
+{% if site.gitment %}
+	<div id="container"></div>
+	<link rel="stylesheet" href="/media/gitment/style/default.css">
+	<script src="/media/gitment/dist/gitment.browser.js"></script>
 	<script type="text/javascript">
-	/* duoshuo */
-	var duoshuoQuery = {short_name:"{{ site.duoshuo }}"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
+		var gitment = new Gitment({
+		  //id: '页面 ID', // 可选。默认为 location.href
+		  owner: 'Valdanitooooo',
+		  repo: 'Valdanitooooo.github.io',
+		  oauth: {
+		    client_id: 'ae8e1056fd0fdfa83dcd',
+		    client_secret: '587645a41329e9870ebda97d8d1ce05b0003b714',
+		  },
+		})
+		gitment.render('container')
 	</script>
 {% endif %}
