@@ -252,5 +252,5 @@ tail -f /var/log/ldaplog/ldap.log
 
 
 ### 配置过程主要参考了以下两篇文章
-1. [rhel7-configure-ldap](https://www.certdepot.net/rhel7-configure-ldap-directory-service-user-connection/ "rhel7-configure-ldap")
-2. [configure-openldap-server](http://www.learnitguide.net/2016/01/configure-openldap-server-on-rhel7.html "configure-openldap-server")
+1. [rhel7-configure-ldap](https://www.certdepot.net/rhel7-configure-ldap-directory-service-user-connection/ "rhel7-configure-ldap"){:target="_blank"}
+2. [configure-openldap-server](http://www.learnitguide.net/2016/01/configure-openldap-server-on-rhel7.html "configure-openldap-server"){:target="_blank"}

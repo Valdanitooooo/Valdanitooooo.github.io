@@ -88,4 +88,4 @@ o: java.com
 只要清楚了ObjectClass与Attribute之间的关系，无论是用什么语言来操作ldap，都会增添很多信心。
 
 ### 参考资料：
-[Appendix E: LDAP - Object Classes and Attributes](http://www.zytrax.com/books/ldap/ape/)
+[Appendix E: LDAP - Object Classes and Attributes](http://www.zytrax.com/books/ldap/ape/){:target="_blank"}
