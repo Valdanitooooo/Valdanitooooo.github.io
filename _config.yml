@@ -1,5 +1,6 @@
 markdown: kramdown
 permalink: /:title/
+# permalink: /:year/:month/:day/:title.html
 url: https://Valdanitooooo.github.io
 name: Valdanito
 author: Valdanito
