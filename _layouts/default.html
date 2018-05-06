@@ -20,15 +20,27 @@
         <a href="javascript:void(0);" onclick="this.parentNode.style.display='none';">关闭</a>
     </div>
     <![endif]-->
+    
+    <!-- Baidu Analytics -->
     <script>
         var _hmt = _hmt || [];
         (function() {
             var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?{{ site.baidu-analyisis }}";
+            hm.src = "https://hm.baidu.com/hm.js?591bc81097305e55717c37659435f4e9";
             var s = document.getElementsByTagName("script")[0]; 
             s.parentNode.insertBefore(hm, s);
         })();
     </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118761201-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-118761201-1');
+    </script>
+
 </head>
 
 <body>
