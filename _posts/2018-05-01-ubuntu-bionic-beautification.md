@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ubuntu 18.04 LTS(Bionic Beaver)界面美化教程
+title: ubuntu 18.04 LTS 界面美化教程
 categories: ubuntu
 tags: ubuntu 系统
 comments: true
