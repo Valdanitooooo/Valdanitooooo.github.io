@@ -6,7 +6,7 @@
 		var gitment = new Gitment({
 		  //id: '页面 ID', // 可选。默认为 location.href
 		  //id: location.href.split('/').pop().replace(/\.html/,''),
-		  id: "{{ post.title }}",
+		  id: {{ page.title }},
 		  owner: 'Valdanitooooo',
 		  repo: 'Valdanitooooo.github.io',
 		  oauth: {
