@@ -29,6 +29,6 @@ xujinkai/aria2-with-webui
 # aria2的使用
 
 直接访问<http://localhost:6880/>可以进入aria2的web操作页面，如图：
-![image001.png](/media/images/aria2/2018-05-08-14-48-32.png)
+![](https://ws1.sinaimg.cn/large/7bb8bd97gy1fu6nz5xi28j20rb0ck757.jpg)
 访问<http://localhost:6888/>可以看到下载的文件目录。
 操作都比较简单，关于aria2的参数化配置有很多教程，没必要记，现用现学吧。

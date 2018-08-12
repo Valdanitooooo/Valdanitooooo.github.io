@@ -26,4 +26,4 @@ sudo apt install peek
 
 一看就会不说了。
 效果如图，支持四种格式。
-![image031.jpg](/media/images/peek/peek_use.png)
+![](https://ws1.sinaimg.cn/large/7bb8bd97gy1fttgkw51s3j20ke0agq5d.jpg)
