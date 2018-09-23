@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 我的第一篇博客
-categories: Valdanito
-tags:
+category: life
+tags: blog
 comments: true
 ---
 

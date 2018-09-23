@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Intellij IDEA快捷键大全(Mac OS)
-categories: 工具
+category: tools
 tags: idea
 comments: true
 ---
@@ -15,7 +15,7 @@ comments: true
 - 目前都是用：Mac OS X 10.5+
 - 有两套的原因：<https://intellij-support.jetbrains.com/hc/en-us/community/posts/206159109-Updated-Mac-OS-X-keymap-Feedback-needed>{:target="_blank"}
 
-> 建议将 Mac 系统中与 IntelliJ IDEA 冲突的快捷键取消或更改，不建议改 IntelliJ IDEA 的默认快捷键。
+> 建议将 Mac 系统中与 IntelliJ IDEA 冲突的快捷键取消或更改，不建议改 IntelliJ IDEA 的默认快捷键。<!-- more -->
 
 ## Mac键盘符号和修饰键说明
 

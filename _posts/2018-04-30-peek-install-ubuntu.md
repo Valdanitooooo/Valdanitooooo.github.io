@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 适用于linux平台的gif录屏软件peek
-categories: 工具
+category: tools
 tags: gif linux
 comments: true
 ---
@@ -10,7 +10,7 @@ comments: true
 
 在win上录gif的工具很多，我用过最好用的是[screentogif](http://www.screentogif.com){:target="_blank"}，可以录制多种格式，压缩率非常高，导出的gif体积小又非常清晰，绝对的神器，git地址：<https://github.com/NickeManarin/ScreenToGif>{:target="_blank"}。
 
-下面介绍一款linux平台上的录屏工具peek，git地址：<https://github.com/phw/peek>{:target="_blank"}。
+下面介绍一款linux平台上的录屏工具peek，git地址：<https://github.com/phw/peek>{:target="_blank"}。<!-- more -->
 
 # 安装
 

@@ -1,16 +1,16 @@
 ---
 layout: post
 title: Struts2获取文件上传文件名和文件类型
-categories: struts java
+category: develop
 tags: sturts java
 comments: true
 ---
 
 很久没做strust框架的项目了，今天做一个上传文件的功能，上传png格式的文件，结果在action里只能看到tmp结尾的临时文件，没法取到文件名和文件类型，查了一下，找到了方法，在这里记录一下。
 
-以下内容转载自<https://blog.csdn.net/net19880504/article/details/20572867>{:target="_blank"}，我来重新排版一下格式。
+以下内容转载自<https://blog.csdn.net/net19880504/article/details/20572867>{:target="_blank"}，我来重新排版一下格式。<!-- more -->
 
-# Struts2获取文件上传文件名和文件类型
+---------------------------------
 
 Action中还有两个属性：**uploadFileName**和 **uploadContentType**，这两个属性分别用于封装上传文件的文件名、文件类型。
 这是Struts2设计的独到之处：Strut2的Action类直接通过File类型属性直接封装了上传文件的文件内容，但这个File属性无法获取上传文件的文件名和文件类型，所以Struts2就直接将文件域中包含的上传文件名和文件类型的信息封装到uploadFileName和 uploadContentType属性中，也就是说Struts2针对表单中名为xxx的文件域，在对应的Action类中使用3个属性来封装该文件域信息：

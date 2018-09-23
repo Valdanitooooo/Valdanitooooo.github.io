@@ -1,17 +1,17 @@
 ---
 layout: post
 title: ubuntu 18.04 LTS 界面美化教程
-categories: ubuntu
+category: develop
 tags: ubuntu 系统
 comments: true
 ---
 
 ubuntu最新版本[ubuntu 18.04 LTS](https://www.ubuntu.com/download/desktop){:target="_blank"}已经发布了几天，这几天我使用的感受还是不错的，界面上一些明显的bug都有改进，关于更新的一些东西我不赘述了，参看官网的发行说明<https://wiki.ubuntu.com/BionicBeaver/ReleaseNotes>{:target="_blank"}。
 
-言归正传，这篇文章主要讲界面美化，这版ubuntu本身的界面并不算丑，但是如果每天面对它工作的时候，还是一开始就弄得美一点比较好，我的小目标是：简单-优美-不花里胡哨。
+言归正传，这篇文章主要讲界面美化，这版ubuntu本身的界面并不算丑，但是如果每天面对它工作的时候，还是一开始就弄得美一点比较好，我的小目标是：简单-优美-不花里胡哨。<!-- more -->
 
 先看一下最终效果再看教程
-![](https://ws1.sinaimg.cn/large/7bb8bd97gy1fu6o4aw7osj211y0lcb29.jpg)s
+![](https://ws1.sinaimg.cn/large/7bb8bd97gy1fu6o4aw7osj211y0lcb29.jpg)
 
 # 安装gnome-tweak-tool
 
