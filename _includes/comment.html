@@ -2,15 +2,16 @@
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 <script type="text/javascript">
-  var _0x1a19 = ["\x63\x31\x66\x62\x62\x62\x33\x38\x39\x61\x32\x65\x30\x61\x38\x63\x35\x37\x38\x64", 
-  "\x33\x37\x34\x30\x34\x64\x64\x36\x31\x38\x32\x63\x62\x37\x62\x33\x36\x39\x65\x32\x39\x62\x33\x31\x32\x64\x32\x66\x30\x63\x38\x64\x66\x63\x36\x35\x39\x61\x32\x32", 
-  "\x47\x69\x74\x48\x75\x62\x20\x72\x65\x70\x6F", 
-  "\x56\x61\x6C\x64\x61\x6E\x69\x74\x6F\x6F\x6F\x6F\x6F", 
-  "\x56\x61\x6C\x64\x61\x6E\x69\x74\x6F\x6F\x6F\x6F\x6F\x2E\x67\x69\x74\x68\x75\x62\x2E\x69\x6F", 
-  "\x7B\x7B\x20\x70\x61\x67\x65\x2E\x74\x69\x74\x6C\x65\x20\x7D\x7D", 
-  "\x67\x69\x74\x61\x6C\x6B\x2D\x63\x6F\x6E\x74\x61\x69\x6E\x65\x72", 
-  "\x72\x65\x6E\x64\x65\x72"]; 
-  var gitalk = new Gitalk({ clientID: _0x1a19[0], clientSecret: _0x1a19[1], repo: _0x1a19[2], owner: _0x1a19[3], 
-    admin: [_0x1a19[4]], id: _0x1a19[5], distractionFreeMode: false }); 
-  gitalk[_0x1a19[7]](_0x1a19[6])
+  var gitalk = new Gitalk({
+    clientID: 'c1fbbb389a2e0a8c578d',
+    clientSecret: '37404dd6182cb7b369e29b312d2f0c8dfc659a22',
+    repo: 'GitHub repo',
+    owner: 'Valdanitooooo',
+    admin: ['Valdanitooooo.github.io'],
+    id: "{{ page.title }}",      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false,  // Facebook-like distraction free mode
+    createIssueManually: true
+  })
+
+  gitalk.render('gitalk-container')
 </script>
