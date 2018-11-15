@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="Valdanito" />
+    <meta name="keywords" content="Valdanito,Valdanito,在Centos7上搭建Ldap服务器" />
+    <meta name="description" content="在Centos7上搭建Ldap服务器" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>在Centos7上搭建Ldap服务器</title>
+    <link rel="shortcut icon" href="/media/images/favicon.ico" />
+    <link rel="stylesheet" href="/media/css/style.css?v=20150623" />
+    <link rel="stylesheet" href="/media/css/iconfont.css?v=20150623" />
+    <link rel="stylesheet" href="/media/css/highlight.css?v=20150623" />
+    <!--<link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml" />-->
+    <!--[if lt IE 9]>
+    <div class="bsie">
+        您的浏览器版本过旧，请升级为Google Chrome浏览器进行浏览 :-D
+        <a href="javascript:void(0);" onclick="this.parentNode.style.display='none';">关闭</a>
+    </div>
+    <![endif]-->
+    
+    <!-- Baidu Analytics -->
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?591bc81097305e55717c37659435f4e9";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- Baidu push -->
+    <script>
+        (function () {
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            }
+            else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118761201-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-118761201-1');
+    </script>
+
+</head>
+
+<body>
+   <!--header-->
+    <header id="header" class="">
+        <i id="btn-open-sidebar" class="icon iconfont">&#xe60a;</i>
+        <h1 class="header-title"><a class="header-title-link" href="/">Valdanito</a></h1>
+        <a class="header-right-picture" href="/about/" title="Valdanito">
+            <img class="header-picture" src="/media/images/avatar.png" alt="头像">
+        </a>
+    </header>
+    <!--sidebar-->
+    <nav id="sidebar">
+        <div class="sidebar-profile">
+            <a href="/about/" title="Valdanito">
+                <img src="/media/images/avatar.png" alt="头像" class="sidebar-profile-picture">
+            </a>
+            <span class="sidebar-profile-name">Valdanito</span>
+        </div>
+        <ul class="sidebar-buttons">
+            <li class="sidebar-button">
+                    <a class="sidebar-button-link " href="/">
+                        <i class="icon iconfont">&#xe603;</i>
+                        <span class="sidebar-button-desc">主&nbsp;&nbsp;&nbsp;&nbsp;页</span>
+                    </a>
+            </li>
+            <li class="sidebar-button">
+                    <a class="sidebar-button-link " href="/categories/">
+                        <i class="icon iconfont">&#xe601;</i>
+                        <span class="sidebar-button-desc">分&nbsp;&nbsp;&nbsp;&nbsp;类</span>
+                    </a>
+            </li>
+            <li class="sidebar-button">
+                    <a class="sidebar-button-link " href="/tags/">
+                        <i class="icon iconfont">&#xe609;</i>
+                        <span class="sidebar-button-desc">标&nbsp;&nbsp;&nbsp;&nbsp;签</span>
+                    </a>
+            </li>
+            <li class="sidebar-button">
+                    <a class="sidebar-button-link " href="/guestbook/">
+
+                        <i class="icon iconfont">&#xe606;</i>
+                        <span class="sidebar-button-desc">留&nbsp;&nbsp;&nbsp;&nbsp;言</span>
+                    </a>
+            </li>
+
+            <li class="sidebar-button">
+
+                    <a class="sidebar-button-link" href="/about/">
+
+                        <i class="icon iconfont">&#xe604;</i>
+                        <span class="sidebar-button-desc">关&nbsp;&nbsp;&nbsp;&nbsp;于</span>
+                    </a>
+            </li>
+
+            <li id="sidebar-search" class="sidebar-button">
+
+                    <a class="sidebar-button-link st-search-show-outputs" href="#search">
+
+                        <i class="icon iconfont">&#xe607;</i>
+                        <span class="sidebar-button-desc">搜&nbsp;&nbsp;&nbsp;&nbsp;索</span>
+                    </a>
+            </li>
+
+        </ul>
+        <ul class="sidebar-buttons">
+            <li class="sidebar-button">
+                    <a class="sidebar-button-link " href="http://github.com/Valdanitooooo/" target="_blank">
+                        <i class="icon iconfont">&#xe605;</i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            <!-- <li class="sidebar-button">
+                    <a class="sidebar-button-link " href="javascript:void(0);" target="_blank">
+                        <i class="icon iconfont">&#xe60b;</i>
+                        <span class="sidebar-button-desc">知乎</span>
+                    </a>
+            </li> -->
+            <!-- <li class="sidebar-button">
+                    <a class="sidebar-button-link " href="http://weibo.com//profile" target="_blank">
+                        <i class="icon iconfont">&#xe602;</i>
+                        <span class="sidebar-button-desc">Weibo</span>
+                    </a>
+            </li> -->
+
+        </ul>
+        <!-- <ul class="sidebar-buttons">
+            <li class="sidebar-button">
+                    <a class="sidebar-button-link " href="javascript:void(0);">
+                        <i class="icon iconfont">&#xe600;</i>
+                        <span class="sidebar-button-desc">RSS订阅</span>
+                    </a>
+            </li>
+        </ul> -->
+    </nav>
+    <div id="main" role="main">
+        <header>
+            <h1>在Centos7上搭建Ldap服务器</h1>
+        </header>
+        <article class="content">
+            <section class="meta">
+<span class="time">
+  <time datetime="2017-07-04">2017-07-04</time>
+</span>
+
+ | 
+<span class="categories">
+  分类
+  
+  <a href="/categories/#开发" title="开发">开发</a>&nbsp;
+  
+</span>
+
+
+ | 
+<span class="tags">
+  标签
+  
+  <a href="/tags/#LDAP" title="LDAP">LDAP</a>&nbsp;
+  
+  <a href="/tags/#Centos" title="Centos">Centos</a>&nbsp;
+  
+</span>
+
+</section>
+<section class="post">
+<h1 id="环境准备">环境准备</h1>
+
+<p>新建两台Linux虚拟机，一台作为服务器一台作为客户端</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Server</th>
+      <th>Client</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>操作系统</td>
+      <td>Centos7 - 64 Bit</td>
+      <td>Centos7 - 64 Bit</td>
+    </tr>
+    <tr>
+      <td>主机名</td>
+      <td>openldapServer</td>
+      <td>openldapClient</td>
+    </tr>
+    <tr>
+      <td>IP地址</td>
+      <td>172.26.17.35</td>
+      <td>172.26.17.36</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="服务器配置">服务器配置</h1>
+<ul>
+  <li>进入172.26.17.35虚拟机
+安装以下软件包：
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum install <span class="nt">-y</span> openldap openldap-clients openldap-servers migrationtools
+</code></pre></div>    </div>
+    <p><img src="/media/images/ldap-server/image001.jpg" alt="image001.jpg" /></p>
+  </li>
+  <li>从秘钥生成LDAP密码（这里设为123456）：
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>slappasswd <span class="nt">-s</span> 123456 <span class="nt">-n</span> <span class="o">&gt;</span> /etc/openldap/passwd
+</code></pre></div>    </div>
+  </li>
+  <li>生成有效期为365天的X509证书：
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>openssl req <span class="nt">-new</span> <span class="nt">-x509</span> <span class="nt">-nodes</span> <span class="nt">-out</span> /etc/openldap/certs/cert.pem <span class="nt">-keyout</span> /etc/openldap/certs/priv.pem <span class="nt">-days</span> 365
+</code></pre></div>    </div>
+    <p><img src="/media/images/ldap-server/image003.jpg" alt="image003.jpg" /></p>
+  </li>
+  <li>保护/ etc / openldap / certs目录的内容：
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> /etc/openldap/certs
+chown ldap:ldap <span class="k">*</span>
+chmod 600 priv.pem
+</code></pre></div>    </div>
+  </li>
+  <li>准备LDAP数据库：
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cp /usr/share/openldap-servers/DB_CONFIG.example /var/lib/ldap/DB_CONFIG
+</code></pre></div>    </div>
+  </li>
+  <li>生成数据库文件（不要担心错误消息！）：
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>slaptest
+</code></pre></div>    </div>
+    <p><img src="/media/images/ldap-server/image005.jpg" alt="image005.jpg" /></p>
+  </li>
+  <li>更改LDAP数据库所有权：
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chown ldap:ldap /var/lib/ldap/<span class="k">*</span>
+</code></pre></div>    </div>
+  </li>
+  <li>设置slapd服务开机启动：
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl <span class="nb">enable </span>slapd
+</code></pre></div>    </div>
+  </li>
+  <li>启动slapd服务：
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl start slapd
+</code></pre></div>    </div>
+  </li>
+  <li>检查LDAP活动：
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>netstat <span class="nt">-lt</span> | <span class="nb">grep </span>ldap
+</code></pre></div>    </div>
+    <p><img src="/media/images/ldap-server/image007.jpg" alt="image007.jpg" /></p>
+  </li>
+  <li>要开始配置LDAP服务器，先添加 cosine 和 nis 这两个 LDAP schema：
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> /etc/openldap/schema
+ldapadd <span class="nt">-Y</span> EXTERNAL <span class="nt">-H</span> ldapi:/// <span class="nt">-D</span> <span class="s2">"cn=config"</span> <span class="nt">-f</span> cosine.ldif
+ldapadd <span class="nt">-Y</span> EXTERNAL <span class="nt">-H</span> ldapi:/// <span class="nt">-D</span> <span class="s2">"cn=config"</span> <span class="nt">-f</span> nis.ldif
+</code></pre></div>    </div>
+    <p><img src="/media/images/ldap-server/image009.jpg" alt="image009.jpg" /></p>
+  </li>
+  <li>然后，创建/etc/openldap/changes.ldif文件（vim /etc/openldap/changes.ldif）并粘贴以下内容，将刚才生成的密码（在/etc/openldap/passwd文件中）粘贴到######处，注意冒号后有一个空格：</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dn: <span class="nv">olcDatabase</span><span class="o">={</span>2<span class="o">}</span>hdb,cn<span class="o">=</span>config
+changetype: modify
+replace: olcSuffix
+olcSuffix: <span class="nv">dc</span><span class="o">=</span>topenldap,dc<span class="o">=</span>com
+
+dn: <span class="nv">olcDatabase</span><span class="o">={</span>2<span class="o">}</span>hdb,cn<span class="o">=</span>config
+changetype: modify
+replace: olcRootDN
+olcRootDN: <span class="nv">cn</span><span class="o">=</span>admin,dc<span class="o">=</span>topenldap,dc<span class="o">=</span>com
+
+dn: <span class="nv">olcDatabase</span><span class="o">={</span>2<span class="o">}</span>hdb,cn<span class="o">=</span>config
+changetype: modify
+replace: olcRootPW
+olcRootPW: <span class="c">######</span>
+
+dn: <span class="nv">cn</span><span class="o">=</span>config
+changetype: modify
+replace: olcTLSCertificateFile
+olcTLSCertificateFile: /etc/openldap/certs/cert.pem
+
+dn: <span class="nv">cn</span><span class="o">=</span>config
+changetype: modify
+replace: olcTLSCertificateKeyFile
+olcTLSCertificateKeyFile: /etc/openldap/certs/priv.pem
+
+dn: <span class="nv">cn</span><span class="o">=</span>config
+changetype: modify
+replace: olcLogLevel
+olcLogLevel: <span class="nt">-1</span>
+
+dn: <span class="nv">olcDatabase</span><span class="o">={</span>1<span class="o">}</span>monitor,cn<span class="o">=</span>config
+changetype: modify
+replace: olcAccess
+olcAccess: <span class="o">{</span>0<span class="o">}</span>to <span class="k">*</span> by dn.base<span class="o">=</span><span class="s2">"gidNumber=0+uidNumber=0,cn=peercred,cn=external,cn=auth"</span> <span class="nb">read </span>by dn.base<span class="o">=</span><span class="s2">"cn=admin,dc=topenldap,dc=com"</span> <span class="nb">read </span>by <span class="k">*</span> none
+</code></pre></div></div>
+<p><img src="/media/images/ldap-server/image011.jpg" alt="image011.jpg" /></p>
+<ul>
+  <li>在这里我们将数据库域名设为topenldap.com，管理员账号为admin，密码为之前生成的密码，日志级别设为-1
+slapd -d ?命令可以获取OpenLDAP的日志级别
+<img src="/media/images/ldap-server/image013.jpg" alt="image013.jpg" /></li>
+  <li>将新配置发送到slapd服务器：
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ldapmodify <span class="nt">-Y</span> EXTERNAL <span class="nt">-H</span> ldapi:/// <span class="nt">-f</span> /etc/openldap/changes.ldif
+</code></pre></div>    </div>
+    <p><img src="/media/images/ldap-server/image015.jpg" alt="image015.jpg" /></p>
+  </li>
+  <li>创建/etc/openldap/base.ldif文件并粘贴以下内容：</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dn: <span class="nv">dc</span><span class="o">=</span>topenldap,dc<span class="o">=</span>com
+dc: topenldap
+objectClass: top
+objectClass: domain
+
+dn: <span class="nv">ou</span><span class="o">=</span>People,dc<span class="o">=</span>topenldap,dc<span class="o">=</span>com
+ou: People
+objectClass: top
+objectClass: organizationalUnit
+
+dn: <span class="nv">ou</span><span class="o">=</span>Group,dc<span class="o">=</span>topenldap,dc<span class="o">=</span>com
+ou: Group
+objectClass: top
+objectClass: organizationalUnit
+</code></pre></div></div>
+<p><img src="/media/images/ldap-server/image017.jpg" alt="image017.jpg" /></p>
+<ul>
+  <li>构建目录服务的结构：
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ldapadd <span class="nt">-x</span> <span class="nt">-W</span> <span class="nt">-D</span> <span class="s2">"cn=admin,dc=topenldap,dc=com"</span> <span class="nt">-f</span> /etc/openldap/base.ldif
+</code></pre></div>    </div>
+    <p>输入密码（123456）
+<img src="/media/images/ldap-server/image019.jpg" alt="image019.jpg" /></p>
+  </li>
+  <li>创建两个用户进行测试：
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir /home/guests
+useradd <span class="nt">-d</span> /home/guests/ldapuser01 ldapuser01
+passwd ldapuser01
+</code></pre></div>    </div>
+    <p>设置密码为：userldap01</p>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>useradd <span class="nt">-d</span> /home/guests/ldapuser02 ldapuser02
+passwd ldapuser02
+</code></pre></div>    </div>
+    <p>设置密码为：userldap02
+<img src="/media/images/ldap-server/image021.jpg" alt="image021.jpg" /></p>
+  </li>
+  <li>现在用户已经创建成功，但这些用户的书写格式是无法直接导入到LDAP服务器上的，所以我们一定要采用格式转换工具migrationtools来转变格式
+转到migrationtools的目录：
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> /usr/share/migrationtools
+</code></pre></div>    </div>
+  </li>
+  <li>编辑migrate_common.ph文件：
+<img src="/media/images/ldap-server/image023.jpg" alt="image023.jpg" />
+将这两行修改为之前我们自定义的域名
+<img src="/media/images/ldap-server/image025.jpg" alt="image025.jpg" />
+在目录服务中创建当前用户(输入密码为管理员密码123456）：
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">grep</span> <span class="s2">":10[0-9][0-9]"</span> /etc/passwd <span class="o">&gt;</span> passwd
+./migrate_passwd.pl passwd users.ldif
+ldapadd <span class="nt">-x</span> <span class="nt">-W</span> <span class="nt">-D</span> <span class="s2">"cn=admin,dc=topenldap,dc=com"</span> <span class="nt">-f</span> users.ldif
+<span class="nb">grep</span> <span class="s2">":10[0-9][0-9]"</span> /etc/group <span class="o">&gt;</span> group
+./migrate_group.pl group groups.ldif
+ldapadd <span class="nt">-x</span> <span class="nt">-W</span> <span class="nt">-D</span> <span class="nv">cn</span><span class="o">=</span>admin,dc<span class="o">=</span>topenldap,dc<span class="o">=</span>com <span class="nt">-f</span> groups.ldif
+</code></pre></div>    </div>
+    <p><img src="/media/images/ldap-server/image027.jpg" alt="image027.jpg" /></p>
+  </li>
+  <li>使用名为ldapuser01的用户测试配置：
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ldapsearch <span class="nt">-x</span> <span class="nv">cn</span><span class="o">=</span>ldapuser01 <span class="nt">-b</span> <span class="nv">dc</span><span class="o">=</span>topenldap,dc<span class="o">=</span>com
+</code></pre></div>    </div>
+  </li>
+  <li>也可以查询所有的用户：
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ldapsearch <span class="nt">-x</span> <span class="nt">-b</span> <span class="s1">'dc=topenldap,dc=com'</span> <span class="s1">'(objectclass=*)'</span>
+</code></pre></div>    </div>
+    <p><img src="/media/images/ldap-server/image029.jpg" alt="image029.jpg" />
+出现以上效果说明用户已经真正的创建成功了</p>
+  </li>
+  <li>向防火墙添加新服务（ldap：port tcp 389）：
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>firewall-cmd <span class="nt">--permanent</span> <span class="nt">--add-service</span><span class="o">=</span>ldap
+</code></pre></div>    </div>
+  </li>
+  <li>重新加载防火墙配置：
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>firewall-cmd <span class="nt">--reload</span>
+</code></pre></div>    </div>
+    <p><img src="/media/images/ldap-server/image031.jpg" alt="image031.jpg" /></p>
+  </li>
+  <li>编辑/etc/rsyslog.conf文件并添加以下内容：
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>local4.<span class="k">*</span>                     /var/log/ldaplog/ldap.log
+</code></pre></div>    </div>
+    <p><img src="/media/images/ldap-server/image033.jpg" alt="image033.jpg" /></p>
+  </li>
+  <li>重新启动rsyslog服务：
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl restart rsyslog
+</code></pre></div>    </div>
+    <p>服务器配置结束</p>
+  </li>
+</ul>
+
+<h1 id="客户端配置">客户端配置</h1>
+<ul>
+  <li>进入172.26.17.36虚拟机
+安装所需的安装包：
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum install <span class="nt">-y</span> openldap-clients nss-pam-ldapd
+</code></pre></div>    </div>
+    <p><img src="/media/images/ldap-server/image035.jpg" alt="image035.jpg" /></p>
+  </li>
+  <li>链接OpenLDAP服务器进行访问：
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>authconfig-tui
+</code></pre></div>    </div>
+    <p><img src="/media/images/ldap-server/image037.jpg" alt="image037.jpg" /></p>
+  </li>
+  <li>Xsell工具在这里有个bug，总是更改我们配置好的内容，很无奈，只好用TDesktop登录172.26.17.36这台主机进行配置</li>
+  <li>执行authconfig-tui后先将左侧“使用 LDAP”和右侧“使用 LDAP 认证” 勾选上，下一步
+<img src="/media/images/ldap-server/image039.jpg" alt="image039.jpg" /></li>
+  <li>将服务器配置为我们的openldapServer机器的ip：172.26.17.35，确定
+<img src="/media/images/ldap-server/image041.jpg" alt="image041.jpg" /></li>
+  <li>之后我们可以回到Xsell里继续操作了
+首先测试一下客户端的配置是否有效
+使用以下命令搜索ldap用户并检查输出。
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>getent passwd ldapuser01
+</code></pre></div>    </div>
+    <p><img src="/media/images/ldap-server/image043.jpg" alt="image043.jpg" />
+如果得到以上输出，则我们的LDAP配置可以正常工作。</p>
+  </li>
+  <li>尝试一下用服务器创建的用户登录客户端机器：
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>su - ldapuser01
+</code></pre></div>    </div>
+    <p><img src="/media/images/ldap-server/image045.jpg" alt="image045.jpg" /></p>
+  </li>
+  <li>得到以上输出说明服务端的用户共享是成功的，可以被其他机子访问。
+再服务器端查看日志：
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tail <span class="nt">-f</span> /var/log/ldaplog/ldap.log
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>至此，一个基本的未加密的openldap服务已经搭建完成</p>
+
+<h3 id="配置过程主要参考了以下两篇文章">配置过程主要参考了以下两篇文章</h3>
+<ol>
+  <li><a href="https://www.certdepot.net/rhel7-configure-ldap-directory-service-user-connection/" title="rhel7-configure-ldap" target="_blank">rhel7-configure-ldap</a></li>
+  <li><a href="http://www.learnitguide.net/2016/01/configure-openldap-server-on-rhel7.html" title="configure-openldap-server" target="_blank">configure-openldap-server</a></li>
+</ol>
+
+</section>
+<section class="page-nav">
+    <br/>
+    <p><a  href="/2018/04/30/peek-install-ubuntu.html" class=""  >下一篇：适用于linux平台的gif录屏软件peek</a></p>
+    <p><a  href="/2017/07/04/ldap-ObjectClass-Attribute.html" class=""  >上一篇：正确的理解LDAP中的ObjectClass和Attribute</a></p>
+</section>
+
+	<div id="container"></div>
+	<link rel="stylesheet" href="/media/gitment/style/default.css">
+	<script src="/media/gitment/dist/gitment.browser.js"></script>
+	<script type="text/javascript">
+		var gitment = new Gitment({
+		  //id: '页面 ID', // 可选。默认为 location.href
+		  //id: location.href.split('/').pop().replace(/\.html/,''),
+		  id: "在Centos7上搭建Ldap服务器",
+		  owner: 'Valdanitooooo',
+		  repo: 'Valdanitooooo.github.io',
+		  oauth: {
+		    client_id: 'ae8e1056fd0fdfa83dcd',
+		    client_secret: '587645a41329e9870ebda97d8d1ce05b0003b714',
+		  },
+		})
+		gitment.render('container')
+	</script>
+
+
+
+        </article>
+        <footer>
+        <p>Powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a> &#64;
+            <a href="http://github.com/Valdanitooooo/Valdanitooooo.github.io" target="_blank" title="项目主页">GitHub</a>
+            | Hosted by <a href="https://pages.coding.me" target="_blank">Coding Pages</a>
+            | © 2017 - 2018 <a href="/about/">Valdanito</a>
+        </p>
+        </footer>
+    </div>
+</body>
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','1ZarQrPGsHydx-KkvfHz','2.0.0');
+</script>
+<script type="text/javascript" src="/media/js/script.js"></script>
+</html>

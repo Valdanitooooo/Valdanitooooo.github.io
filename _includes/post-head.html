@@ -1,0 +1,51 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="author"  content="{{ site.author }}">
+    <meta name="description" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="keywords"  content="{% if page.tags.size > 0 %}{% for tag in page.tags  %}{{ tag }}{% if forloop.last == false %}, {% endif %}{% endfor %}{% endif %}">
+    <!-- Open Graph -->
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ page.url | prepend: site.url }}">
+    <meta property="og:description" content="{{ site.description }}">
+    <meta property="og:site_name" content="{{ site.title }}">
+    <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_818807_w8mxfht85h.css">
+    <link rel="stylesheet" href="/assets/css/github-markdown.css">
+    <link rel="stylesheet" href="/assets/css/prism.css">
+    <link rel="stylesheet" href="//cdn.staticfile.org/social-share.js/1.0.16/css/share.min.css">
+    <link rel="stylesheet" href="/assets/css/app.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="//cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	{% if site.mathjax %}
+	{% include mathjax.html %}
+	{% endif %}
+    {% include anchor.html %}
+
+    {% for cat in site.all_categories %} 
+        {% if page.category == cat[0] %} 
+            {% assign category_name = cat[1] %} 
+            {% assign category_link = cat[2] %} 
+        {% endif %} 
+    {% endfor %} 
+    {% assign category_posts=site.categories[page.category] %} 
+    {% assign prevpost = nil %} 
+    {% assign nextpost = nil %} 
+    {% assign found = false %} 
+    {% for post in category_posts %} 
+        {% if found==true %} 
+            {% assign prevpost = post %} 
+            {% break %} 
+        {% endif %} 
+        {% if page.url==post.url %} 
+            {% assign found = true %} 
+        {% endif %} 
+        {% if found==false %} 
+            {% assign nextpost = post %} 
+        {% endif %} 
+    {% endfor %} 
+    {% assign category_posts = nil %}
+</head>
