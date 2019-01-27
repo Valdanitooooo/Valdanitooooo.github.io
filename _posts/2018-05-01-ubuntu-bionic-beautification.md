@@ -68,8 +68,7 @@ GNOME Shell 桌面有很多扩展可以安装，可以到这里去选择<https:/
 1. Arc Menu ：我只改了一处，在Appearance>Customize menu button appearance处点击设置按钮，进入Button appearance，在Select icon for the menu button处我切换了菜单按钮的icon，选择了System Icon。
 2. Dash to Dock ： 在启动标签下选择全部禁用，不让原来默认的菜单栏显示出来。
 
-![image005.jpg](/media/images/bionic-beautification/2018-05-01-13-08-1
-8.png)
+![](https://ws1.sinaimg.cn/large/7bb8bd97gy1fzl6fbdjb1j20h20cgab4.jpg)
 3. Dash to Panel ：这里的设置可以多尝试，感觉舒服就行，下面是我做的微调，仅供参考。
 ![](https://ws1.sinaimg.cn/large/7bb8bd97gy1fu6o934x6sj20go0j6gmv.jpg)
 ![](https://ws1.sinaimg.cn/large/7bb8bd97gy1fu6o9z2ccoj20go0j6jsv.jpg)

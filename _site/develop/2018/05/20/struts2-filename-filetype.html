@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Struts2获取文件上传文件名和文件类型 - Valdanito's Blog</title>
+    <meta name="author"  content="Valdanito">
+    <meta name="description" content="Struts2获取文件上传文件名和文件类型">
+    <meta name="keywords"  content="sturts, java">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Struts2获取文件上传文件名和文件类型 - Valdanito's Blog">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://0.0.0.0:4000/develop/2018/05/20/struts2-filename-filetype.html">
+    <meta property="og:description" content="Valdanito's Blog">
+    <meta property="og:site_name" content="Valdanito's Blog">
+    <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_818807_w8mxfht85h.css">
+    <link rel="stylesheet" href="/assets/css/github-markdown.css">
+    <link rel="stylesheet" href="/assets/css/prism.css">
+    <link rel="stylesheet" href="//cdn.staticfile.org/social-share.js/1.0.16/css/share.min.css">
+    <link rel="stylesheet" href="/assets/css/app.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="//cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+	<!--
+Author: Ray-Eldath
+refer to:
+ - http://docs.mathjax.org/en/latest/options/index.html
+-->
+
+	<script type="text/javascript" async src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+	
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+		jax: ["input/TeX", "output/HTML-CSS"],
+		tex2jax: {
+			inlineMath: [ ["$", "$"] ],
+			displayMath: [ ["$$", "$$"] ],
+			skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+		},
+		"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+      });
+    </script>
+
+	
+    <!--
+Author: Ray-Eldath
+-->
+<style>
+    .markdown-body .anchor{
+        float: left;
+        margin-top: -8px;
+        margin-left: -20px;
+        padding-right: 4px;
+        line-height: 1;
+        opacity: 0;
+    }
+    
+    .markdown-body .anchor .anchor-icon{
+        font-size: 15px
+    }
+</style>
+<script>
+    $(document).ready(function() {
+        let nodes = document.querySelector(".markdown-body").querySelectorAll("h1,h2,h3")
+        for(let node of nodes) {
+            var anchor = document.createElement("a")
+            var anchorIcon = document.createElement("i")
+            anchorIcon.setAttribute("class", "fa fa-anchor fa-lg anchor-icon")
+            anchorIcon.setAttribute("aria-hidden", true)
+            anchor.setAttribute("class", "anchor")
+            anchor.setAttribute("href", "#" + node.getAttribute("id"))
+            
+            anchor.onmouseover = function() {
+                this.style.opacity = "0.4"
+            }
+            
+            anchor.onmouseout = function() {
+                this.style.opacity = "0"
+            }
+            
+            anchor.appendChild(anchorIcon)
+            node.appendChild(anchor)
+        }
+    })
+</script>
+
+     
+     
+     
+     
+     
+     
+         
+         
+         
+     
+         
+             
+             
+    
+</head>
+
+
+<body>
+  <!--[if lt IE 10]>
+<div class="alert-danger" role="alert">你的浏览器实在太太太旧了，放学别走，升级完浏览器再说！<a target="_blank" class="alert-link" href="http://browsehappy.com">立即升级</a></div>
+<![endif]-->
+  <input id="nm-switch" type="hidden" value="true"> <header class="g-header">
+    <div class="g-logo">
+      <a href="/"></a>
+    </div>
+    <i id="menu-toggle" class="iconfont icon-menu"></i>
+    <nav class="g-nav">
+        <ul>
+            <!--  -->
+            <li>
+                <a href="/">
+                    HOME
+                </a>
+            </li>
+            
+            <li>
+                <a href="/develop/index.html">
+                    DEVELOP
+                </a>
+            </li>
+            
+            <li>
+                <a href="/gists/index.html">
+                    GISTS
+                </a>
+            </li>
+            
+            <li>
+                <a href="/tools/index.html">
+                    TOOLS
+                </a>
+            </li>
+            
+            <li>
+                <a href="/reads/index.html">
+                    BOOKS
+                </a>
+            </li>
+            
+            <li>
+                <a href="/life/index.html">
+                    Hello World
+                </a>
+            </li>
+            
+            <li>
+                <a href="/demo.html">
+                    DEMO
+                </a>
+            </li>
+            
+            <li>
+                <a href="/tags.html">
+                    TAGS
+                </a>
+            </li>
+            
+            <li>
+                <a href="/favorites.html">
+                    FAVORITES
+                </a>
+            </li>
+            
+            <li>
+                <a href="/about.html">
+                    ABOUT
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</header>
+
+
+  <header class="g-banner post-header post-pattern-circuitBoard bgcolor-default post-no-cover" data-theme="default">
+    <div class="post-wrapper">
+      <div class="post-tags">
+        
+          
+            <a href="http://0.0.0.0:4000/tags#sturts" class="post-tag">sturts</a>
+          
+            <a href="http://0.0.0.0:4000/tags#java" class="post-tag">java</a>
+          
+        
+      </div>
+      <h2>Struts2获取文件上传文件名和文件类型</h2>
+      <div class="post-meta">
+        <span class="post-meta-item"><i class="iconfont icon-user"></i><a href="http://0.0.0.0:4000" target="_blank" rel="author">Valdanito</a></></span>
+        <time class="post-meta-item" datetime="18-05-20"><i class="iconfont icon-date"></i>20 May 2018</time>
+        <span class="post-meta-item"><i class="iconfont icon-see"></i><span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span></span>
+      </div>
+    </div>
+    
+  </header>
+
+  <div class="post-content visible">
+    
+
+    <article class="markdown-body">
+      <p>很久没做strust框架的项目了，今天做一个上传文件的功能，上传png格式的文件，结果在action里只能看到tmp结尾的临时文件，没法取到文件名和文件类型，查了一下，找到了方法，在这里记录一下。</p>
+
+<p>以下内容转载自<a href="https://blog.csdn.net/net19880504/article/details/20572867" target="_blank">https://blog.csdn.net/net19880504/article/details/20572867</a>，我来重新排版一下格式。<!-- more --></p>
+
+<hr />
+
+<p>Action中还有两个属性：<strong>uploadFileName</strong>和 <strong>uploadContentType</strong>，这两个属性分别用于封装上传文件的文件名、文件类型。
+这是Struts2设计的独到之处：Strut2的Action类直接通过File类型属性直接封装了上传文件的文件内容，但这个File属性无法获取上传文件的文件名和文件类型，所以Struts2就直接将文件域中包含的上传文件名和文件类型的信息封装到uploadFileName和 uploadContentType属性中，也就是说Struts2针对表单中名为xxx的文件域，在对应的Action类中使用3个属性来封装该文件域信息：</p>
+
+<ul>
+  <li>类型为File的xxx属性：用来封装页面文件域对应的文件内容。</li>
+  <li>类型为String的xxxFileName属性：用来封装该文件域对应的文件的文件名。</li>
+  <li>类型为String的xxxContentType属性：用来封装该文件域应用的文件的文件类型。</li>
+</ul>
+
+<hr />
+
+<p>以下是实际代码：</p>
+
+<p>jsp页面：</p>
+
+<p><code class="highlighter-rouge">&lt;input type="file" id="upload" name="upload"/&gt;</code>  这个name就是与Action的属性对应</p>
+
+<p>Action类代码：</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+    <span class="kd">private</span> <span class="n">File</span> <span class="n">upload</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">uploadFileName</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">uploadContentType</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setUpload</span><span class="o">(</span><span class="n">File</span> <span class="n">upload</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">upload</span> <span class="o">=</span> <span class="n">upload</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setUploadFileName</span><span class="o">(</span><span class="n">String</span> <span class="n">uploadFileName</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">uploadFileName</span> <span class="o">=</span> <span class="n">uploadFileName</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setUploadContentType</span><span class="o">(</span><span class="n">String</span> <span class="n">uploadContentType</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">uploadContentType</span> <span class="o">=</span> <span class="n">uploadContentType</span><span class="o">;</span>
+    <span class="o">}</span>
+
+</code></pre></div></div>
+
+<p>设置3个属性。分别给set方法. 这样子，就能够获取上传的文件，文件名，文件类型。</p>
+
+<p><strong>注意</strong>：这个uploadFileName，uploadContentType。如果File 属性名xxx(private File xxx;) 。那这个必须是xxxFileName, xxxContentType。然后也是分别给set 方法就可以。</p>
+
+<p><strong>特别注意</strong>：，<s:file></s:file>标志不仅仅是绑定到upload，还有uploadContentType（上传文件的MIME类型）和uploadFileName（上传文件的文件名，该文件名不包括文件的路径）。因此，<s:file name="xxx"></s:file>对应Action类里面的xxx、xxxContentType和xxxFileName三个属性。</p>
+
+    </article>
+
+    
+    <div class="social-share-wrapper">
+      <div class="social-share"></div>
+    </div>
+    
+
+  </div>
+
+  <section class="author-detail">
+    <section class="post-footer-item author-card">
+      <div class="avatar">
+        <img src="/assets/img/profile.png" alt="">
+      </div>
+      <div class="author-name" rel="author">Valdanito</div>
+      <div class="bio">
+        <p>Code Monkey</p>
+      </div>
+      
+      <ul class="sns-links">
+        
+        <li>
+          <a href="//github.com/Valdanitooooo" target="_blank">
+                    <i class="iconfont icon-github"></i>
+                </a>
+        </li>
+        
+      </ul>
+      
+    </section>
+    <section class="post-footer-item read-next">
+      
+      <div class="read-next-item">
+        <a href="/book/2018/09/23/traditional-culture.html" class="read-next-link"></a>
+        <section>
+          <span>《文化自信：中华优秀传统文化核心思想理念读本》</span>
+          <p>《文化自信：中华优秀传统文化核心思想理念读本》在图书馆新书推荐的几个书架中间晃悠的时候发现的这本书。这本书分为六章...</p>
+        </section>
+        
+     </div>
+      
+
+      
+      <div class="read-next-item">
+        <a href="/tools/2018/05/12/intellij-idea-keymap.html" class="read-next-link"></a>
+          <section>
+            <span>Intellij IDEA快捷键大全(linux & windows)</span>
+            <p>原地址：http://wiki.jikexueyuan.com/project/intellij-idea-tut...</p>
+          </section>
+          
+      </div>
+      
+    </section>
+    <section class="post-footer-item comment">
+     
+    <!-- Blog Comments -->
+      <div id="gitalk-container" style="margin:0px 10px"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: 'c1fbbb389a2e0a8c578d',
+    clientSecret: '37404dd6182cb7b369e29b312d2f0c8dfc659a22',
+    repo: 'Valdanitooooo.github.io',
+    owner: 'Valdanitooooo',
+    admin: ['Valdanitooooo'],
+    id: "Struts2获取文件上传文件名和文件类型",      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+    // ,createIssueManually: true
+  })
+
+  gitalk.render('gitalk-container')
+</script>
+    
+    </section>
+  </section>
+
+  <footer class="g-footer">
+  <section>Valdanito's Blog ©
+  
+  
+    2017
+    -
+  
+  2019
+  All Rights Reserved.
+  </section>
+  <section>
+    Powered by <a href="//jekyllrb.com" target="_blank">Jekyll</a> | 
+    Hosted by <a href="https://pages.coding.me" target="_blank">Coding Pages</a> | 
+    <a href="http://github.com/Valdanitooooo/Valdanitooooo.github.io" target="_blank" title="本站源码">Source</a> | 
+    <a href="https://github.com/kaeyleo/jekyll-theme-H2O" target="_blank">Theme H2O</a>
+  </section>
+</footer>
+
+
+  <script src="//cdn.staticfile.org/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+  <script src="/assets/js/prism.js"></script>
+  <script src="/assets/js/index.min.js"></script>
+</body>
+
+</html>
