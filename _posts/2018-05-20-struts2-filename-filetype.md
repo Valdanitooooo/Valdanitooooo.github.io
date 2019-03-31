@@ -1,14 +1,19 @@
 ---
 layout: post
 title: Struts2获取文件上传文件名和文件类型
-category: develop
+categories: develop
 tags: sturts java
-comments: true
 ---
+
+* content
+{:toc}
 
 很久没做strust框架的项目了，今天做一个上传文件的功能，上传png格式的文件，结果在action里只能看到tmp结尾的临时文件，没法取到文件名和文件类型，查了一下，找到了方法，在这里记录一下。
 
-以下内容转载自<https://blog.csdn.net/net19880504/article/details/20572867>{:target="_blank"}，我来重新排版一下格式。<!-- more -->
+以下内容转载自<https://blog.csdn.net/net19880504/article/details/20572867>{:target="_blank"}，我来重新排版一下格式。
+
+
+
 
 ---------------------------------
 

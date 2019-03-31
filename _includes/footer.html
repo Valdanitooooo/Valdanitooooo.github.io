@@ -1,17 +1,28 @@
-<footer class="g-footer">
-  <section>{{ site.title }} ©
-  {% assign current = "now" | date: "%Y" | plus: 0%}
-  {% unless site.footer.since and site.footer.since == current %}
-    {{ site.footer.since }}
-    -
-  {% endunless %}
-  {{ current }}
-  All Rights Reserved.
-  </section>
-  <section>
-    Powered by <a href="//jekyllrb.com" target="_blank">Jekyll</a> | 
-    Hosted by <a href="https://pages.coding.me" target="_blank">Coding Pages</a> | 
-    <a href="http://github.com/{{ site.github }}/{{ site.github }}.github.io" target="_blank" title="本站源码">Source</a> | 
-    <a href="https://github.com/kaeyleo/jekyll-theme-H2O" target="_blank">Theme H2O</a>
-  </section>
+<footer class="site-footer">
+
+
+    <div class="wrapper">
+
+        <!-- <p class="description">
+            
+        </p> -->
+        <!-- <p class="contact">
+            {% if site.description_footer %} {{site.description_footer}}, {% endif %}Contact me at: {% if site.github_username %}
+            <a href="https://github.com/{{site.github_username}}" target="_blank" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a> {% endif %} {% if site.email %}
+            <a href="mailto:{{site.email}}" title="email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a> {% endif %}
+        </p> -->
+        <p>Valdanito's Blog © 2017 - 2019 All Rights Reserved.</p>
+        <!-- <p>
+            Site Traffic | <span id="busuanzi_value_site_pv"></span>，Visitors | <span id="busuanzi_value_site_uv"></span>，Page Views | <span id="busuanzi_value_page_pv"></span>
+        </p> -->
+        <p class="power">
+            <span>
+                Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> | Hosted by <a href="https://pages.github.com/" target="_blank">Github Pages</a>
+            </span>
+            <span>
+                | <a href="https://github.com/Gaohaoyang/gaohaoyang.github.io" target="_blank">Theme</a> | <a href="https://github.com/Valdanitooooo/Valdanitooooo.github.io" target="_blank">Source</a>.
+            </span>
+        </p>
+    </div>
 </footer>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>

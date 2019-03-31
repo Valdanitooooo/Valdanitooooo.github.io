@@ -1,86 +1,37 @@
-# Markdown
-markdown: kramdown
-highlighter: rouge
-kramdown:
-  input: GFM
-
-permalink: /:categories/:year/:month/:day/:title.html
-excerpt_separator: "<!-- more -->"
-
-# Site settings 配置站点
-title: "Valdanito's Blog"
-description: "Valdanito's Blog"
-keyword: "Valdanito, 技术博客"
-url: "http://www.valdanito.top" # your host
-
-# if you don't need baseurl, you should leave this value blank.
+# Site settings
+title: Valdanito
+brief-intro: keep calm && keep coding
 baseurl: ""
+url: "Valdanitooooo.github.io"
 
-all_categories: [
-  ["develop", "DEVELOP", "/develop/index.html"], 
-  ["gists", "GISTS", "/gists/index.html"],
-  ["tools", "TOOLS", "/tools/index.html"],
-  ["reads", "BOOKS", "/reads/index.html"],
-  ["life", "Hello World", "/life/index.html"], 
-  ["demo", "DEMO", "/demo.html"],
-  ["tags", "TAGS", "/tags.html"],
-  ["favorites", "FAVORITES", "/favorites.html"],
-  ["about", "ABOUT", "/about.html"]
-]
-# Footer
-footer:
-  since: 2017
+permalink: /:year/:month/:day/:title/
 
-# Author 配置博主信息
-author: "Valdanito"
-nickname: "Valdanito"
-bio: "Code Monkey"
-avatar: "/assets/img/profile.png"
+# other links
+github_username:  Valdanitooooo
+email: valdanito@qq.com
 
-# Search
-search: true
+description_footer: 记录所学所想所感
 
-# Night mode
-nightMode: true
-
-# MathJax 公式支持 by Ray-Eldath
-mathjax: true
-
-index_layout: "index.html"
-category_layout: "_layouts/category.html"
-tag_layout: "tags.html"
-
-collections:
-  docs:
-    output: true
-
-# gems: [jekyll-paginate]
-
-# Share
-social-share: true
-
-# theme color 主题皮肤
-theme-color: "default"  # pink or default
-
-# Post header background patterns (when the post no cover): circuitBoard, overlappingCircles, food, glamorous, ticTacToe, seaOfClouds
-postPatterns: "circuitBoard"
-
-# SNS settings 配置社交网站
-# url: email, weibo, zhihu, twitter, instagram, juejin, github, douban, facebook, dribble, uicn, jianshu, medium, linkedin
-
-github: "Valdanitooooo"
-
-sns:
-  github: "//github.com/Valdanitooooo"
-
-# Tags 设置标签
-recommend-tags: true # whether or not display recommend-tags on the sidebar
-recommend-condition-size: 12 # a tag will be recommended if the size of it is more than this value
+baidu_tongji_id: 591bc81097305e55717c37659435f4e9
+google_analytics_id: UA-118761201-1 # google 分析追踪id
 
 # Build settings
-paginate: 6
-paginate_path: 'page:num'
-# paginate_path: "index_:num"
-exclude: ["node_modules", "dev", "package.json", "gulpfile.js", ".gitignore", "README.md"]
+markdown: kramdown
 
-plugins: [jekyll-paginate]
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# port
+# port: 1234
+
+# url
+category_dir: category/
+tag_dir: tag/
+
+# excerpt
+excerpt_separator: "\n\n\n\n"
+
+# paginate
+gems: [jekyll-paginate]
+paginate: 6

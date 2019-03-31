@@ -1,418 +1,819 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valdanito's Blog</title>
-    <meta name="author"  content="Valdanito">
-    <meta name="description" content="Valdanito's Blog">
-    <meta name="keywords"  content="Valdanito, 技术博客">
-    <!-- Open Graph -->
-    <meta property="og:title" content="Valdanito's Blog">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="http://0.0.0.0:4000/page2/">
-    <meta property="og:description" content="Valdanito's Blog">
-    <meta property="og:site_name" content="Valdanito's Blog">
-    <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_818807_w8mxfht85h.css">
-    <link rel="stylesheet" href="/assets/css/github-markdown.css">
-    <link rel="stylesheet" href="/assets/css/prism.css">
-    <link rel="stylesheet" href="//cdn.staticfile.org/social-share.js/1.0.16/css/share.min.css">
-    <link rel="stylesheet" href="/assets/css/app.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="//cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Valdanito</title>
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico?" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
+    <link rel="stylesheet" href="/css/main.css ">
+    <link rel="canonical" href="http://0.0.0.0:4000/page2/">
+    <link rel="alternate" type="application/rss+xml" title="Valdanito" href="http://0.0.0.0:4000/feed.xml ">
+
+
     <script>
-        var _hmt = _hmt || [];
-        (function () {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?591bc81097305e55717c37659435f4e9";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
+    // 百度统计代码
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?591bc81097305e55717c37659435f4e9";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
     </script>
-    <!-- Baidu push -->
+
+
     <script>
-        (function () {
-            var bp = document.createElement('script');
-            var curProtocol = window.location.protocol.split(':')[0];
-            if (curProtocol === 'https') {
-                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-            }
-            else {
-                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-            }
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(bp, s);
-        })();
+    // google analytics
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-118761201-1', 'auto');
+      ga('send', 'pageview');
+
     </script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118761201-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'UA-118761201-1');
-    </script>
+
+
+
 </head>
 
-<body>
-    <!--[if lt IE 10]>
-<div class="alert-danger" role="alert">你的浏览器实在太太太旧了，放学别走，升级完浏览器再说！<a target="_blank" class="alert-link" href="http://browsehappy.com">立即升级</a></div>
-<![endif]-->
-    <input id="nm-switch" type="hidden" value="true">
-    <div class="visible">
-      
-<header class="g-header">
-    <div class="g-logo">
-      <a href="/"></a>
+
+  <body>
+
+    <header id="top">
+    <div class="wrapper">
+        <a href="/" class="brand">Valdanito</a>
+        <small>keep calm && keep coding</small>
+        <button id="headerMenu" class="menu"><i class="fa fa-bars"></i></button>
+        <nav id="headerNav">
+            <ul>
+                <li>
+                    
+                    <a href="/">
+                    
+                        <i class="fa fa-home"></i>Home
+                    </a>
+                </li>
+
+                
+                    
+                    <li>
+                        
+                        <a href="/archive/">
+                        
+                            <i class="fa fa-archive"></i>Archives
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/category/">
+                        
+                            <i class="fa fa-th-list"></i>Categories
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/tag/">
+                        
+                            <i class="fa fa-tags"></i>Tags
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/collection/">
+                        
+                            <i class="fa fa-bookmark"></i>Collections
+                        </a>
+                    </li>
+                    
+                
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/error/">
+                        
+                            <i class="fa fa-frown-o"></i>Errors
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/books/">
+                        
+                            <i class="fa fa-book"></i>Books
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/about/">
+                        
+                            <i class="fa fa-heart"></i>About
+                        </a>
+                    </li>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        </nav>
     </div>
-    <i id="menu-toggle" class="iconfont icon-menu"></i>
-    <nav class="g-nav">
-        <ul>
-            <!--  -->
-            <li>
-                <a href="/">
-                    HOME
-                </a>
-            </li>
-            
-            <li>
-                <a href="/develop/index.html">
-                    DEVELOP
-                </a>
-            </li>
-            
-            <li>
-                <a href="/gists/index.html">
-                    GISTS
-                </a>
-            </li>
-            
-            <li>
-                <a href="/tools/index.html">
-                    TOOLS
-                </a>
-            </li>
-            
-            <li>
-                <a href="/reads/index.html">
-                    BOOKS
-                </a>
-            </li>
-            
-            <li>
-                <a href="/life/index.html">
-                    Hello World
-                </a>
-            </li>
-            
-            <li>
-                <a href="/demo.html">
-                    DEMO
-                </a>
-            </li>
-            
-            <li>
-                <a href="/tags.html">
-                    TAGS
-                </a>
-            </li>
-            
-            <li>
-                <a href="/favorites.html">
-                    FAVORITES
-                </a>
-            </li>
-            
-            <li>
-                <a href="/about.html">
-                    ABOUT
-                </a>
-            </li>
-            
-        </ul>
-    </nav>
 </header>
 
 
-<div class="g-banner home-banner banner-theme-default" data-theme="default">
-    <h2>Valdanito's Blog</h2>
-    <h3>记录所学所想所感</h3>
+        <div class="page clearfix" index>
+    <div class="left">
+        <h1>Welcome to Valdanito's Blog!</h1>
+        <small>记录所学所想所感</small>
+        <hr>
+        <ul>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2018/04/30/peek-install-ubuntu/">适用于linux平台的gif录屏软件peek</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2018-04-30
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
     
-</div>
+        <a href="/category/#tools" title="Category: tools" rel="category">tools</a>
+    
+  
 
-<main class="g-container home-content">
-    <div class="article-list">
-        
-            <article class="article-item">
-                
-                <section class="post-preview">
-                    <a class="post-link" href="/tools/2018/04/30/peek-install-ubuntu.html" title="适用于linux平台的gif录屏软件peek"></a>
-                    <h2 class="post-title">适用于linux平台的gif录屏软件peek</h2>
-                    
-                    
-                    <p class="post-excerpt">在学习和工作中，很多时候要记录一些操作，录制一段gif要比截图和录制视频事半功n倍，分享给别人也非常方便。在win上录gif的工具很多，我用过最好用的是screentogif，可以录制多种格式，压缩率非常高，导出的gif体积小又非常清晰，绝对的神...</p>
-                    
-                </section>
-                <footer class="post-meta">
-                    <div class="post-tags">
-                        
-                            
-                            <a href=tags.html#gif class="post-tag">gif</a>
-                            
-                            <a href=tags.html#linux class="post-tag">linux</a>
-                            
-                        
-                    </div>
-                    <!-- <time class="post-date" class="" datetime="18-04-30">30 Apr 2018</time> -->
-                    <time class="post-date iconfont icon-date" class="" datetime="18-04-30">30 Apr 2018</time>
-                </footer>
-            </article>
-        
-            <article class="article-item">
-                
-                <section class="post-preview">
-                    <a class="post-link" href="/test/2017/07/30/mathjax-test.html" title="MathJax Test"></a>
-                    <h2 class="post-title">MathJax Test</h2>
-                    
-                    
-                    <p class="post-excerpt">mathjax in markdown :)这是一个不align的公式：这是一个align的公式：注意：公式块要想有较好的显示效果，必须在公式块标记符$$前后留有空行，否则公式将不能正常居中。行内公式无此问题。</p>
-                    
-                </section>
-                <footer class="post-meta">
-                    <div class="post-tags">
-                        
-                            
-                            <a href=tags.html#mathjax class="post-tag">mathjax</a>
-                            
-                        
-                    </div>
-                    <!-- <time class="post-date" class="" datetime="17-07-30">30 Jul 2017</time> -->
-                    <time class="post-date iconfont icon-date" class="" datetime="17-07-30">30 Jul 2017</time>
-                </footer>
-            </article>
-        
-            <article class="article-item">
-                
-                <section class="post-preview">
-                    <a class="post-link" href="/develop/2017/07/04/ldap-server-centos7.html" title="在Centos7上搭建Ldap服务器"></a>
-                    <h2 class="post-title">在Centos7上搭建Ldap服务器</h2>
-                    
-                    
-                    <p class="post-excerpt">环境准备新建两台Linux虚拟机，一台作为服务器一台作为客户端                   Server      Client                  操作系统      Centos7 - 64 Bit      Cento...</p>
-                    
-                </section>
-                <footer class="post-meta">
-                    <div class="post-tags">
-                        
-                            
-                            <a href=tags.html#LDAP class="post-tag">LDAP</a>
-                            
-                            <a href=tags.html#centos class="post-tag">centos</a>
-                            
-                        
-                    </div>
-                    <!-- <time class="post-date" class="" datetime="17-07-04">04 Jul 2017</time> -->
-                    <time class="post-date iconfont icon-date" class="" datetime="17-07-04">04 Jul 2017</time>
-                </footer>
-            </article>
-        
-            <article class="article-item">
-                
-                <section class="post-preview">
-                    <a class="post-link" href="/develop/2017/07/04/ldap-ObjectClass-Attribute.html" title="正确的理解LDAP中的ObjectClass和Attribute"></a>
-                    <h2 class="post-title">正确的理解LDAP中的ObjectClass和Attribute</h2>
-                    
-                    
-                    <p class="post-excerpt">  初学LDAP,无论是用java还是Python来添加Entry都报了很多错,各种各样的错,原来以为是引用的的第三方库不好用,或者自己代码漏洞太多,甚至配置的LDAP服务器有问题,现在终于搞清楚,其实是自己对ObjectClass和Attrib...</p>
-                    
-                </section>
-                <footer class="post-meta">
-                    <div class="post-tags">
-                        
-                            
-                            <a href=tags.html#LDAP class="post-tag">LDAP</a>
-                            
-                        
-                    </div>
-                    <!-- <time class="post-date" class="" datetime="17-07-04">04 Jul 2017</time> -->
-                    <time class="post-date iconfont icon-date" class="" datetime="17-07-04">04 Jul 2017</time>
-                </footer>
-            </article>
-        
-            <article class="article-item">
-                
-                <section class="post-preview">
-                    <a class="post-link" href="/develop/2017/05/30/accessed-web-inf-jsp.html" title="SpringMvc框架实现优雅的页面跳转"></a>
-                    <h2 class="post-title">SpringMvc框架实现优雅的页面跳转</h2>
-                    
-                    
-                    <p class="post-excerpt">WEB-INF是安全目录，没法通过地址栏直接访问，下面我来总结一下几种访问WEB-INF下jsp的方法。在controller处理比较传统的做法。    @RequestMapping(value="/index")    public Stri...</p>
-                    
-                </section>
-                <footer class="post-meta">
-                    <div class="post-tags">
-                        
-                            
-                            <a href=tags.html#java class="post-tag">java</a>
-                            
-                            <a href=tags.html#springmvc class="post-tag">springmvc</a>
-                            
-                        
-                    </div>
-                    <!-- <time class="post-date" class="" datetime="17-05-30">30 May 2017</time> -->
-                    <time class="post-date iconfont icon-date" class="" datetime="17-05-30">30 May 2017</time>
-                </footer>
-            </article>
-        
-            <article class="article-item">
-                
-                <section class="post-preview">
-                    <a class="post-link" href="/life/2017/05/29/myFirstBlog.html" title="我的第一篇博客"></a>
-                    <h2 class="post-title">我的第一篇博客</h2>
-                    
-                    
-                    <p class="post-excerpt">研究了一下用GitHub搭建个人网站，觉得挺有趣的。做这件事的源头是最近突然有了想写一些东西的欲望，可能程序猿到一定程度都会有这样的欲望吧，不过这样说有点太拔高自己了。主要是看了很多东西，自己在心里做了一些总结，如果不写出来怕以后忘了，也算是一种...</p>
-                    
-                </section>
-                <footer class="post-meta">
-                    <div class="post-tags">
-                        
-                            
-                            <a href=tags.html#blog class="post-tag">blog</a>
-                            
-                        
-                    </div>
-                    <!-- <time class="post-date" class="" datetime="17-05-29">29 May 2017</time> -->
-                    <time class="post-date iconfont icon-date" class="" datetime="17-05-29">29 May 2017</time>
-                </footer>
-            </article>
-        
+  <!-- <span class="point">•</span> -->
+</span>
 
-        
-            <nav class="pagination">
-    <input type="hidden" id="total_pages" value="3">
-    <input type="hidden" id="current_pages" value="2">
-    <input type="hidden" id="base_url" value="/">
-    <div class="page-links">
-        
-            
-            <a href="/" class="page-link" title="Previous Page">&laquo;</a>
-            
-        
-        <div id="page-link-container"></div>
-        
-        <a href="/page3/" class="page-link">&raquo;</a>
-        
-    </div>
-</nav>
 
-        
+                    </div>
 
-    </div>
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#gif" title="Tag: gif" rel="tag">gif</a>&nbsp;
+    
+        <a href="/tag/#linux" title="Tag: linux" rel="tag">linux</a>
+    
+  
 
-    <aside class="g-sidebar-wrapper">
-        <div class="g-sidebar">
-            <section class="author-card">
-                <div class="avatar">
-                    <img src="/assets/img/profile.png" alt="">
+</span>
+
+                    </div>
                 </div>
-                <div class="author-name" rel="author">Valdanito</div>
-                <div class="bio">
-                    <p>Code Monkey</p>
+                <div class="excerpt">
+                    
+<p>在学习和工作中，很多时候要记录一些操作，录制一段gif要比截图和录制视频事半功n倍，分享给别人也非常方便。</p>
+
+<p>在win上录gif的工具很多，我用过最好用的是<a href="http://www.screentogif.com" target="_blank">screentogif</a>，可以录制多种格式，压缩率非常高，导出的gif体积小又非常清晰，绝对的神器，git地址：<a href="https://github.com/NickeManarin/ScreenToGif" target="_blank">https://github.com/NickeManarin/ScreenToGif</a>。</p>
+
+<p>下面介绍一款linux平台上的录屏工具peek，git地址：<a href="https://github.com/phw/peek" target="_blank">https://github.com/phw/peek</a>。</p>
+
+
                 </div>
-                
-                <ul id="sns-links" class="sns-links">
+                <div class="read-all">
+                    <a  href="/2018/04/30/peek-install-ubuntu/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2017/07/04/ldap-server-centos7/">在Centos7上搭建Ldap服务器</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2017-07-04
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#develop" title="Category: develop" rel="category">develop</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#LDAP" title="Tag: LDAP" rel="tag">LDAP</a>&nbsp;
+    
+        <a href="/tag/#centos" title="Tag: centos" rel="tag">centos</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <ul id="markdown-toc">
+  <li><a href="#环境准备" id="markdown-toc-环境准备">环境准备</a></li>
+</ul>
+
+<h1 id="环境准备">环境准备</h1>
+
+<p>新建两台Linux虚拟机，一台作为服务器一台作为客户端</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Server</th>
+      <th>Client</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>操作系统</td>
+      <td>Centos7 - 64 Bit</td>
+      <td>Centos7 - 64 Bit</td>
+    </tr>
+    <tr>
+      <td>主机名</td>
+      <td>openldapServer</td>
+      <td>openldapClient</td>
+    </tr>
+    <tr>
+      <td>IP地址</td>
+      <td>172.26.17.35</td>
+      <td>172.26.17.36</td>
+    </tr>
+  </tbody>
+</table>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2017/07/04/ldap-server-centos7/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2017/07/04/ldap-ObjectClass-Attribute/">正确的理解LDAP中的ObjectClass和Attribute</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2017-07-04
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#develop" title="Category: develop" rel="category">develop</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#LDAP" title="Tag: LDAP" rel="tag">LDAP</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <ul id="markdown-toc">
+  <li><a href="#objectclass" id="markdown-toc-objectclass">ObjectClass</a></li>
+</ul>
+<p>初学LDAP,无论是用java还是Python来添加Entry都报了很多错,各种各样的错,原来以为是引用的的第三方库不好用,或者自己代码漏洞太多,甚至配置的LDAP服务器有问题,现在终于搞清楚,其实是自己对ObjectClass和Attribute之间的关系了解的不够透彻,找过许多的中文资料都没有得到答案,现在终于有所突破,赶紧记录下来.
+他们之间的关系与Java里面的一些概念很相似，LDAP中每一个Entry必须属于某一个ObjectClass，用Java的方式来理解这个Entry对应着一个Instance，而 ObjectClass自然就是class了。
+我们再详细了解一下ObjectClass和Attribute。<!-- more --></p>
+
+<h1 id="objectclass">ObjectClass</h1>
+
+<p>一个ObjectClass是属性的集合（或属性容器），并具有以下特点：</p>
+
+<ol>
+  <li>ObjectClass在Schema中定义</li>
+  <li>ObjectClass可以是对象类层次结构的一部分，在这种情况下，它继承其父对象的所有属性。 例如，inetOrgPerson是organizationalPerson的子类，organizationalPerson是person的子类，person是top的子类（ABSTRACT objectClass，它终止每个对象类层次结构）。</li>
+  <li>ObjectClass具有全局唯一的名称或标识符。</li>
+  <li>ObjectClass以及作为属性容器，也是属性，并且可以出现在搜索操作中。</li>
+  <li>ObjectClass定义了它的成员属性以及这些属性必须存在（强制）还是可能存在（可选）。</li>
+  <li>必须存在一个或多个ObjectClass。</li>
+  <li>一个LDAP条目中必须存在一个且只有一个STRUCTURAL ObjectClass。</li>
+  <li>由LDAP服务器支持的每个ObjectClass形成称为objectclasses的集合的一部分，可以通过子Schema发现。</li>
+</ol>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2017/07/04/ldap-ObjectClass-Attribute/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2017/05/30/accessed-web-inf-jsp/">SpringMvc框架实现优雅的页面跳转</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2017-05-30
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#develop" title="Category: develop" rel="category">develop</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#java" title="Tag: java" rel="tag">java</a>&nbsp;
+    
+        <a href="/tag/#springmvc" title="Tag: springmvc" rel="tag">springmvc</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <ul id="markdown-toc">
+  <li><a href="#在controller处理" id="markdown-toc-在controller处理">在controller处理</a></li>
+</ul>
+
+<p>WEB-INF是安全目录，没法通过地址栏直接访问，下面我来总结一下几种访问WEB-INF下jsp的方法。</p>
+
+<h1 id="在controller处理">在controller处理</h1>
+
+<p>比较传统的做法。</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nd">@RequestMapping</span><span class="o">(</span><span class="n">value</span><span class="o">=</span><span class="s">"/index"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">index</span><span class="o">(){</span>
+        <span class="k">return</span> <span class="s">"index"</span><span class="o">;</span>
+    <span class="o">}</span>
+</code></pre></div></div>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2017/05/30/accessed-web-inf-jsp/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/about.html">about</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2017-01-01
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <h1 id="关于本站">关于本站</h1>
+
+<h2 id="0博客主题">0.博客主题</h2>
+
+<p>这是我的个人博客，也可以认为是在线笔记，记录所学所想所感。</p>
+
+<h2 id="1说明">1.说明</h2>
+
+<ul>
+  <li>本博客基于Jekyll工具构建，模板代码基于<a href="https://github.com/kaeyleo/jekyll-theme-H2O" target="_blank">theme-H2O</a>, 做了些简单修改。</li>
+  <li>本站jekyll模板可任意使用<a href="https://github.com/Valdanitooooo/Valdanitooooo.github.io" target="_blank">(源码)</a>。</li>
+  <li>本站名称：Valdanito’s Blog</li>
+  <li>本站网址：<a href="http://www.valdanito.top" target="_blank">http://www.valdanito.top</a>。</li>
+</ul>
+
+<h2 id="2个人信息">2.个人信息</h2>
+
+<ul>
+  <li>Valdanito, 理工🐶程序🐶足球🐶单身🐶90后老🐶。</li>
+</ul>
+
+<h2 id="3联系方式">3.联系方式</h2>
+
+<ul>
+  <li>Github: <a href="https://github.com/Valdanitooooo" target="_blank">Valdanitooooo</a></li>
+  <li>Email: valdanito(at)qq.com</li>
+</ul>
+
+<h2 id="4阿森纳">4.阿森纳</h2>
+
+<h2 id="5赞助">5.赞助</h2>
+
+<ul>
+  <li><a href="https://www.unicef.org/zh" target="_blank">不需要赞助</a></li>
+</ul>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/about.html"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+        </ul>
+
+
+
+        <!-- Pagination links -->
+        <div class="pagination">
+          
+            <a href="/index.html" class="previous"><i class="fa fa-angle-double-left"></i></a>
+            <a href="/" class="previous"><i class="fa fa-angle-left"></i></a>
+          
+          <span class="page_number ">2/2</span>
+          
+            <span class="next disable"><i class="fa fa-angle-right"></i></span>
+            <span class="next disable"><i class="fa fa-angle-double-right"></i></span>
+          
+        </div>
+    </div>
+    <!-- <button class="anchor"><i class="fa fa-anchor"></i></button> -->
+    <div class="right">
+        <div class="wrap">
+            <div class="side">
+                <div>
+                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    Recent Posts
+                </div>
+                <ul class="content-ul" recent>
+                    
+                        <li><a href="/2018/09/23/traditional-culture/">《文化自信：中华优秀传统文化核心思想理念读本》</a></li>
+                    
+                        <li><a href="/2018/05/20/struts2-filename-filetype/">Struts2获取文件上传文件名和文件类型</a></li>
+                    
+                        <li><a href="/2018/05/12/intellij-idea-keymap/">Intellij IDEA快捷键大全(linux & windows)</a></li>
+                    
+                        <li><a href="/2018/05/12/intellij-idea-keymap-mac/">Intellij IDEA快捷键大全(Mac OS)</a></li>
+                    
+                        <li><a href="/2018/05/08/docker-aria2-install/">快速上手aria2，docker安装</a></li>
+                    
+                        <li><a href="/2018/05/01/ubuntu-bionic-beautification/">ubuntu 18.04 LTS 界面美化教程</a></li>
+                    
+                        <li><a href="/2018/04/30/peek-install-ubuntu/">适用于linux平台的gif录屏软件peek</a></li>
+                    
+                        <li><a href="/2017/07/04/ldap-server-centos7/">在Centos7上搭建Ldap服务器</a></li>
+                    
+                        <li><a href="/2017/07/04/ldap-ObjectClass-Attribute/">正确的理解LDAP中的ObjectClass和Attribute</a></li>
+                    
+                        <li><a href="/2017/05/30/accessed-web-inf-jsp/">SpringMvc框架实现优雅的页面跳转</a></li>
+                    
+                </ul>
+            </div>
+
+            <!-- Content -->
+            <div class="side ">
+                <div>
+                    <i class="fa fa-th-list"></i>
+                    Categories
+                </div>
+                <ul class="content-ul" cate>
                     
                     <li>
-                        <a href="//github.com/Valdanitooooo" target="_blank">
-                            <i class="iconfont icon-github"></i>
+                        <a href="/category/#develop" class="categories-list-item" cate="develop">
+                            <span class="name">
+                                develop
+                            </span>
+                            <span class="badge">5</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/category/#tools" class="categories-list-item" cate="tools">
+                            <span class="name">
+                                tools
+                            </span>
+                            <span class="badge">4</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/category/#book" class="categories-list-item" cate="book">
+                            <span class="name">
+                                book
+                            </span>
+                            <span class="badge">1</span>
                         </a>
                     </li>
                     
                 </ul>
-                
-            </section>
+            </div>
+            <!-- 其他div框放到这里 -->
+            <div class="side">
+                <div>
+                    <i class="fa fa-tags"></i>
+                    Tags
+                </div>
+                <div class="tags-cloud">
+                    
+                    
+                    
+                    
 
-            
-            <section class="tags-card">
-                
                     
-                    <a href="tags.html#blog" class="tag">blog</a>
-                
+
                     
-                    <a href="tags.html#java" class="tag">java</a>
-                
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#java" style="font-size: 18pt; color: #000;">java</a>
                     
-                    <a href="tags.html#springmvc" class="tag">springmvc</a>
-                
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#springmvc" style="font-size: 9pt; color: #999;">springmvc</a>
                     
-                    <a href="tags.html#LDAP" class="tag">LDAP</a>
-                
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#LDAP" style="font-size: 18pt; color: #000;">LDAP</a>
                     
-                    <a href="tags.html#centos" class="tag">centos</a>
-                
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#centos" style="font-size: 9pt; color: #999;">centos</a>
                     
-                    <a href="tags.html#mathjax" class="tag">mathjax</a>
-                
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#gif" style="font-size: 9pt; color: #999;">gif</a>
                     
-                    <a href="tags.html#gif" class="tag">gif</a>
-                
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#linux" style="font-size: 9pt; color: #999;">linux</a>
                     
-                    <a href="tags.html#linux" class="tag">linux</a>
-                
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#ubuntu" style="font-size: 9pt; color: #999;">ubuntu</a>
                     
-                    <a href="tags.html#ubuntu" class="tag">ubuntu</a>
-                
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#系统" style="font-size: 9pt; color: #999;">系统</a>
                     
-                    <a href="tags.html#系统" class="tag">系统</a>
-                
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#aria2" style="font-size: 9pt; color: #999;">aria2</a>
                     
-                    <a href="tags.html#aria2" class="tag">aria2</a>
-                
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#docker" style="font-size: 9pt; color: #999;">docker</a>
                     
-                    <a href="tags.html#docker" class="tag">docker</a>
-                
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#idea" style="font-size: 18pt; color: #000;">idea</a>
                     
-                        
-            </section>
-            
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#sturts" style="font-size: 9pt; color: #999;">sturts</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#传统文化" style="font-size: 9pt; color: #999;">传统文化</a>
+                    
+                </div>
+            </div>
+
+            <!-- <div class="side">
+                <div>
+                    <i class="fa fa-external-link"></i>
+                    Links
+                </div>
+                <ul  class="content-ul">
+
+                </ul>
+            </div> -->
         </div>
-        
-        <div class="search-card">
-            <input id="search_input" type="text" placeholder="Search..." autocomplete="off">
-            <i class="iconfont icon-search"></i>
-            <div class="search_result"></div>
-        </div>
-        
-
-    </aside>
-
-</main>
-
-<footer class="g-footer">
-  <section>Valdanito's Blog ©
-  
-  
-    2017
-    -
-  
-  2019
-  All Rights Reserved.
-  </section>
-  <section>
-    Powered by <a href="//jekyllrb.com" target="_blank">Jekyll</a> | 
-    Hosted by <a href="https://pages.coding.me" target="_blank">Coding Pages</a> | 
-    <a href="http://github.com/Valdanitooooo/Valdanitooooo.github.io" target="_blank" title="本站源码">Source</a> | 
-    <a href="https://github.com/kaeyleo/jekyll-theme-H2O" target="_blank">Theme H2O</a>
-  </section>
-</footer>
-
-
     </div>
-    <script src="//cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
-    <script src="/assets/js/prism.js"></script>
-    <script src="/assets/js/index.min.js"></script>
-</body>
+</div>
+<!-- <script src="/js/scroll.min.js " charset="utf-8"></script> -->
+<!-- <script src="/js/pageContent.js " charset="utf-8"></script> -->
+
+
+    <footer class="site-footer">
+
+
+    <div class="wrapper">
+
+        <!-- <p class="description">
+            
+        </p> -->
+        <!-- <p class="contact">
+             记录所学所想所感, Contact me at: 
+            <a href="https://github.com/Valdanitooooo" target="_blank" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>  
+            <a href="mailto:valdanito@qq.com" title="email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a> 
+        </p> -->
+        <p>Valdanito's Blog © 2017 - 2019 All Rights Reserved.</p>
+        <!-- <p>
+            Site Traffic | <span id="busuanzi_value_site_pv"></span>，Visitors | <span id="busuanzi_value_site_uv"></span>，Page Views | <span id="busuanzi_value_page_pv"></span>
+        </p> -->
+        <p class="power">
+            <span>
+                Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> | Hosted by <a href="https://pages.github.com/" target="_blank">Github Pages</a>
+            </span>
+            <span>
+                | <a href="https://github.com/Gaohaoyang/gaohaoyang.github.io" target="_blank">Theme</a> | <a href="https://github.com/Valdanitooooo/Valdanitooooo.github.io" target="_blank">Source</a>.
+            </span>
+        </p>
+    </div>
+</footer>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <div class="back-to-top">
+    <a href="#top" data-scroll>
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    </a>
+</div>
+
+    <script src=" /js/main.js " charset="utf-8"></script>
+    <script src=" /js/smooth-scroll.min.js " charset="utf-8"></script>
+    <script type="text/javascript">
+      smoothScroll.init({
+        speed: 500, // Integer. How fast to complete the scroll in milliseconds
+        easing: 'easeInOutCubic', // Easing pattern to use
+        offset: 20, // Integer. How far to offset the scrolling anchor location in pixels
+      });
+    </script>
+    <!-- <script src=" /js/scroll.min.js " charset="utf-8"></script> -->
+  </body>
+
 </html>

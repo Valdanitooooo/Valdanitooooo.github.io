@@ -1,10 +1,12 @@
 ---
 layout: post
 title: 在Centos7上搭建Ldap服务器
-category: develop
+categories: develop
 tags: LDAP centos
-comments: true
 ---
+
+* content
+{:toc}
 
 # 环境准备
 
@@ -16,7 +18,9 @@ comments: true
 |  主机名 |  openldapServer   |  openldapClient |
 |  IP地址 |  172.26.17.35  |  172.26.17.36 |
 
-<!-- more -->
+
+
+
 
 # 服务器配置
 

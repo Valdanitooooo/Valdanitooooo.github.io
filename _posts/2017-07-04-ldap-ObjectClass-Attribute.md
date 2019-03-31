@@ -1,12 +1,13 @@
 ---
 layout: post
 title: 正确的理解LDAP中的ObjectClass和Attribute
-category: develop
+categories: develop
 tags: LDAP
-comments: true
 ---
 
-&emsp;&emsp;初学LDAP,无论是用java还是Python来添加Entry都报了很多错,各种各样的错,原来以为是引用的的第三方库不好用,或者自己代码漏洞太多,甚至配置的LDAP服务器有问题,现在终于搞清楚,其实是自己对ObjectClass和Attribute之间的关系了解的不够透彻,找过许多的中文资料都没有得到答案,现在终于有所突破,赶紧记录下来.
+* content
+{:toc}
+初学LDAP,无论是用java还是Python来添加Entry都报了很多错,各种各样的错,原来以为是引用的的第三方库不好用,或者自己代码漏洞太多,甚至配置的LDAP服务器有问题,现在终于搞清楚,其实是自己对ObjectClass和Attribute之间的关系了解的不够透彻,找过许多的中文资料都没有得到答案,现在终于有所突破,赶紧记录下来.
 他们之间的关系与Java里面的一些概念很相似，LDAP中每一个Entry必须属于某一个ObjectClass，用Java的方式来理解这个Entry对应着一个Instance，而 ObjectClass自然就是class了。
 我们再详细了解一下ObjectClass和Attribute。<!-- more -->
 
@@ -22,6 +23,9 @@ comments: true
 6. 必须存在一个或多个ObjectClass。
 7. 一个LDAP条目中必须存在一个且只有一个STRUCTURAL ObjectClass。
 8. 由LDAP服务器支持的每个ObjectClass形成称为objectclasses的集合的一部分，可以通过子Schema发现。
+
+
+
 
 在Java中Class大致可以分为Abstract，concrete两种，只有concrete Class才能生成Instance。而在LDAP中ObjectClass分为三种：Abstract(抽象型)，Structural(结构型)，Auxiliary(辅助型)。具体定义如下：
 

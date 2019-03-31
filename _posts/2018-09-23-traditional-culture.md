@@ -1,10 +1,13 @@
 ---
 layout: post
 title: '《文化自信：中华优秀传统文化核心思想理念读本》'
-category: book
+categories: book
 tags: 传统文化
-comments: true
+featimg: http://img13.360buyimg.com/n1/jfs/t14536/24/1794648542/231573/bd070904/5a59a4bbN86f485d8.jpg
 ---
+
+* content
+{:toc}
 
 # 《文化自信：中华优秀传统文化核心思想理念读本》
 
@@ -17,6 +20,9 @@ comments: true
 需要吐槽的有两点：一是这个书名，文化自信？越强调反倒越不自信；二是译文，有些不太准确，看上去成书比较仓促。
 
 摘抄一些佳句，自己查找了一些译文。
+
+
+
 
 ## 讲仁爱
 

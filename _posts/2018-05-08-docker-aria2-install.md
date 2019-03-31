@@ -1,13 +1,17 @@
 ---
 layout: post
 title: 快速上手aria2，docker安装
-category: tools
+categories: tools
 tags: aria2 docker
-comments: true
 ---
+* content
+{:toc}
 
 [aria2](https://aria2.github.io/){:target="_blank"}是一款轻量级的多协议和多源命令行下载工具。它支持HTTP / HTTPS，FTP，SFTP，BitTorrent和Metalink。aria2可以通过内置的JSON-RPC和XML-RPC接口进行操作。
-这是aria2官网上的介绍，可以看出aria2支持的协议不少，**还能提供api接口**，这一点很厉害哦。<!-- more -->
+这是aria2官网上的介绍，可以看出aria2支持的协议不少，**还能提供api接口**，这一点很厉害哦。
+
+
+
 
 # docker安装带web界面的aria2
 

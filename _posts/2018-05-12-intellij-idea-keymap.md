@@ -1,10 +1,12 @@
 ---
 layout: post
 title: Intellij IDEA快捷键大全(linux & windows)
-category: tools
+categories: tools
 tags: idea
-comments: true
 ---
+
+* content
+{:toc}
 
 原地址：<http://wiki.jikexueyuan.com/project/intellij-idea-tutorial/keymap-introduce.html>{:target="_blank"}
 
@@ -23,7 +25,11 @@ comments: true
 |Ctrl + D|**复制光标所在行 或 复制选择内容，并把复制内容插入光标位置下面** （必备） |
 |Ctrl + W|**递进式选择代码块。可选中光标所在的单词或段落，连续按会在原有选中的基础上再扩展选中范围** （必备） |
 |Ctrl + E|**显示最近打开的文件记录列表** （必备） |
-|Ctrl + N|**根据输入的 类名 查找类文件** （必备） |<!-- more -->
+|Ctrl + N|**根据输入的 类名 查找类文件** （必备） |
+
+
+
+
 |Ctrl + G|在当前文件跳转到指定行处|
 |Ctrl + J|**插入自定义动态代码模板** （必备） |
 |Ctrl + P|**方法参数提示显示** （必备） |

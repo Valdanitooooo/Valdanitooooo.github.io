@@ -1,10 +1,12 @@
 ---
 layout: post
 title: SpringMvc框架实现优雅的页面跳转
-category: develop
+categories: develop
 tags: java springmvc
-comments: true
 ---
+
+* content
+{:toc}
 
 WEB-INF是安全目录，没法通过地址栏直接访问，下面我来总结一下几种访问WEB-INF下jsp的方法。
 
@@ -19,7 +21,8 @@ WEB-INF是安全目录，没法通过地址栏直接访问，下面我来总结�
     }
 ```
 
-<!-- more -->
+
+
 
 # 在web.xml中配置servlet
 
