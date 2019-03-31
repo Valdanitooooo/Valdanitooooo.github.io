@@ -8,7 +8,7 @@
 ## 模板使用说明
 
 - 将_posts目录下的文档替换成自己的, 其他一些个人信息自行替换
-- 本地可以启用docker调试, 在源码根目录下执行docker-compose up -d, 浏览器访问localhost:3999。 本地调试修改md, html, js, css等静态文件即时生效, 修改一些系统配置文件, 如Gemfile, _config.yml等需要重启docker容器生效, 执行docker restart jekyll。
+- 本地可以启用docker调试, 在源码根目录下执行docker-compose up -d启动容器, 浏览器访问localhost:3999。 使用docker logs -f jekyll命令监控日志, 本地调试修改md, html, js, css等静态文件即时生效, 修改一些系统配置文件, 如Gemfile, _config.yml等需要重启docker容器生效, 执行docker restart jekyll。
 
 ## 联系方式
 
