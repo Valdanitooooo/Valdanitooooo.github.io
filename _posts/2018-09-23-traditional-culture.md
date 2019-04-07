@@ -3,13 +3,11 @@ layout: post
 title: '《文化自信：中华优秀传统文化核心思想理念读本》'
 categories: book
 tags: 传统文化
-featimg: http://img13.360buyimg.com/n1/jfs/t14536/24/1794648542/231573/bd070904/5a59a4bbN86f485d8.jpg
+featimg: https://ws1.sinaimg.cn/large/7bb8bd97gy1g1u76tdr4oj209q09qt9s.jpg
 ---
 
 * content
 {:toc}
-
-# 《文化自信：中华优秀传统文化核心思想理念读本》
 
 在图书馆新书推荐的几个书架中间晃悠的时候发现的这本书。
 
