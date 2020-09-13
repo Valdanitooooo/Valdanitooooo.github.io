@@ -12,7 +12,9 @@ tags: docker ubuntu linux mac k8s
 
 minikube启动集群时报错
 
+```sh
 Unable to find image 'gcr.io/k8s-minikube/kicbase:v0.0.7@sha256:a6f288de0e5863cdeab711fa6bafa38ee7d8d285ca14216ecf84fcfb07c7d176' locally
+```
 
 是由于镜像的RepoDigest丢失
 
