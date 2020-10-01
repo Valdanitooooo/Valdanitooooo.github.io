@@ -35,3 +35,5 @@ excerpt_separator: "\n\n\n\n"
 # paginate
 gems: [jekyll-paginate]
 paginate: 6
+
+pic_bed_root: http://tva2.sinaimg.com/large/

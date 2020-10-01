@@ -3,7 +3,7 @@ layout: post
 title: '《汉字中的九州》'
 categories: book
 tags: book
-featimg: http://ws1.sinaimg.cn/large/7bb8bd97gy1g3ery4srboj20u016e0vw.jpg
+featimg: 7bb8bd97gy1g3ery4srboj20u016e0vw.jpg
 ---
 
 * content
