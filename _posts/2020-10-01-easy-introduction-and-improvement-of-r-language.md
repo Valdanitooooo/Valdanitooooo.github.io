@@ -2,7 +2,7 @@
 layout: post
 title: '《R语言轻松入门与提高》'
 categories: book
-tags: book
+tags: book R
 featimg: 7bb8bd97gy1gjbx8l2wnlj20ah0dw75e.jpg
 ---
 

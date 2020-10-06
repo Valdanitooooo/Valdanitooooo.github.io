@@ -2,7 +2,7 @@
 layout: post
 title: '《R的极客理想-工具篇》'
 categories: book
-tags: book
+tags: book R
 featimg: 7bb8bd97gy1gjekmamot8j20k20rudhz.jpg
 ---
 
