@@ -8,12 +8,12 @@ permalink: /:year/:month/:day/:title/
 
 # other links
 github_username:  Valdanitooooo
-email: valdanito@qq.com
+email: valdanito@foxmail.com
 
 description_footer: 记录所学所想所感
 
-baidu_tongji_id: 591bc81097305e55717c37659435f4e9
-google_analytics_id: UA-118761201-1 # google 分析追踪id
+# baidu_tongji_id: 591bc81097305e55717c37659435f4e9
+# google_analytics_id: UA-118761201-1 # google 分析追踪id
 
 # Build settings
 markdown: kramdown

@@ -11,14 +11,14 @@ type: page
 
 ## 0.关于本站
 
-* 这是我的个人博客，也可以认为是在线笔记，记录所学所想所感。
-* 本博客基于Jekyll工具构建，模板代码基于[https://github.com/Gaohaoyang/gaohaoyang.github.io](https://github.com/Gaohaoyang/gaohaoyang.github.io){:target="_blank"}。
+* 这是我的个人博客，记录所学所想所感
+* 本博客基于Jekyll工具构建，模板代码基于[https://github.com/Gaohaoyang/gaohaoyang.github.io](https://github.com/Gaohaoyang/gaohaoyang.github.io){:target="_blank"}
 * 本站名称：Valdanito's Blog
-* 本站网址：<https://www.valdanito.top>{:target="_blank"}。
+* 本站网址：<https://www.valdanito.cn>{:target="_blank"}
 
 ## 1.个人信息
 
-* Valdanito, 理工🐶程序🐶足球🐶单身🐶90后老🐶。
+* Valdanito, 理工🐶程序🐶足球🐶单身🐶90后老🐶
 
 ## 2.联系方式
 
