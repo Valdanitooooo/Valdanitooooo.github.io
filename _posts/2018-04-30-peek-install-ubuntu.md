@@ -32,4 +32,4 @@ sudo apt install peek
 
 一看就会不说了。
 效果如图，支持四种格式。
-![](http://tva2.sinaimg.com/large/7bb8bd97gy1fttgkw51s3j20ke0agq5d.jpg)
+![](http://p.ananas.chaoxing.com/star3/origin/65e60ccf2b0d71fafaff9a5d2b224c89.jpg)

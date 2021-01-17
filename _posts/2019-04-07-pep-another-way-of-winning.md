@@ -3,7 +3,7 @@ layout: post
 title: '《瓜迪奥拉: 胜利的另一种道路》'
 categories: book
 tags: 足球 book
-featimg: 7bb8bd97gy1g3esefq314j20p00x1wi3.jpg
+featimg: b5cfdb4190c389a19c76454d3acb46fc.jpg
 ---
 
 * content

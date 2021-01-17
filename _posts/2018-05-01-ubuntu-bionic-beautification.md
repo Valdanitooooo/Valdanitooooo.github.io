@@ -13,7 +13,7 @@ ubuntu最新版本[ubuntu 18.04 LTS](https://www.ubuntu.com/download/desktop){:t
 言归正传，这篇文章主要讲界面美化，这版ubuntu本身的界面并不算丑，但是如果每天面对它工作的时候，还是一开始就弄得美一点比较好，我的小目标是：简单-优美-不花里胡哨。<!-- more -->
 
 先看一下最终效果再看教程
-![](http://tva2.sinaimg.com/large/7bb8bd97gy1fu6o4aw7osj211y0lcb29.jpg)
+![](http://p.ananas.chaoxing.com/star3/origin/11bd29d7768a334d729d8013fe5ac5fc.jpg)
 
 
 
@@ -30,7 +30,7 @@ sudo apt install gnome-tweak-tool
 
 GNOME Shell 桌面有很多扩展可以安装，可以到这里去选择<https://extensions.gnome.org/>{:target="_blank"}。
 安装和卸载扩展非常简单，拖拽右侧滑块即可，如图：
-![](http://tva2.sinaimg.com/large/7bb8bd97gy1fu6o5tveq0g20id060t94.gif)
+![](http://p.ananas.chaoxing.com/star3/origin/4d2f928278d5b4f3fc6f1e75c5db8418.gif)
 我安装了的主要有以下几个：
 
 1. User Themes ：从用户目录加载 shell themes。
@@ -41,7 +41,7 @@ GNOME Shell 桌面有很多扩展可以安装，可以到这里去选择<https:/
 # 下载主题
 
 我这里选的是这款[Matcha Gtk Theme](https://www.gnome-look.org/p/1187179/){:target="_blank"}，可以选择喜欢的颜色下载。
-![](http://tva2.sinaimg.com/large/7bb8bd97gy1fu6o6ru9zwj20nw0f9mzb.jpg)
+![](http://p.ananas.chaoxing.com/star3/origin/39c9b2234a9b592f9967ce2258fe46a6.jpg)
 
 # 安装主题
 
@@ -61,28 +61,28 @@ GNOME Shell 桌面有很多扩展可以安装，可以到这里去选择<https:/
 # 使用gnome-tweak-tool切换主题
 
 主题安装好后就可以到tweak里去切换了
-![](http://tva2.sinaimg.com/large/7bb8bd97gy1fu6o7q76j2j20jg0dvjsb.jpg)
+![](http://p.ananas.chaoxing.com/star3/origin/48921ebc3670543cf6a643584bf0ca16.jpg)
 这是我的选择，Matcha的icon使用后效果不好，我还是用了系统里面的suru，字体我没有改。
 
 # 使用gnome-tweak-tool微调样式
 
 这里我主要说下扩展里面的设置
-![](http://tva2.sinaimg.com/large/7bb8bd97gy1fu6o8bvg93j20jg0dvmyp.jpg)
+![](http://p.ananas.chaoxing.com/star3/origin/d1a0b45694b6c851aa0cd987363787e3.jpg)
 点击左侧扩展菜单，在右侧显示了我们安装过的扩展，点击扩展的设置按钮进行调整。
 
 1. Arc Menu ：我只改了一处，在Appearance>Customize menu button appearance处点击设置按钮，进入Button appearance，在Select icon for the menu button处我切换了菜单按钮的icon，选择了System Icon。
 2. Dash to Dock ： 在启动标签下选择全部禁用，不让原来默认的菜单栏显示出来。
 
-![](http://tva2.sinaimg.com/large/7bb8bd97gy1fzl6fbdjb1j20h20cgab4.jpg)
+![](http://p.ananas.chaoxing.com/star3/origin/2e008957c03666d004d10eb646582fc0.jpg)
 3. Dash to Panel ：这里的设置可以多尝试，感觉舒服就行，下面是我做的微调，仅供参考。
-![](http://tva2.sinaimg.com/large/7bb8bd97gy1fu6o934x6sj20go0j6gmv.jpg)
-![](http://tva2.sinaimg.com/large/7bb8bd97gy1fu6o9z2ccoj20go0j6jsv.jpg)
-![](http://tva2.sinaimg.com/large/7bb8bd97gy1fu6oaed3vjj20go0j6myk.jpg)
+![](http://p.ananas.chaoxing.com/star3/origin/eeb23dc9ed4c2ab6ddc7aefb69bcd62c.jpg)
+![](http://p.ananas.chaoxing.com/star3/origin/8c77c7735df6a8ee8b979821f5f0460d.jpg)
+![](http://p.ananas.chaoxing.com/star3/origin/03932e64675d7f19d44ffa33a4c9423f.jpg)
 微调菜单最下面高级选项
-![](http://tva2.sinaimg.com/large/7bb8bd97gy1fu6oaty10kj20a304njru.jpg)
+![](http://p.ananas.chaoxing.com/star3/origin/f4fc370120c90092f5f7b4e789cbf5ac.jpg)
 
 大概就是这样了，icon可能跟主题配色不太搭，但是suru对菜单里面的分组做的很好，图标也比较全。
 再补几张效果图：
-![](http://tva2.sinaimg.com/large/7bb8bd97gy1fu6obiwc6tj211y0lckjl.jpg)
-![](http://tva2.sinaimg.com/large/7bb8bd97gy1fu6obwlbymj20oq0fzwgh.jpg)
-![](http://tva2.sinaimg.com/large/7bb8bd97gy1fu6ocdf3ygg20g40h1e81.gif)
+![](http://p.ananas.chaoxing.com/star3/origin/445900b7dd3b6d3b2dc7de229ae5f72a.jpg)
+![](http://p.ananas.chaoxing.com/star3/origin/b37105170a6aafd26ba132f7194647b7.jpg)
+![](http://p.ananas.chaoxing.com/star3/origin/0e6179820fda2f8a8a10b9565b15c273.gif)

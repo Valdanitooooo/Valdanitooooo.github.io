@@ -3,7 +3,7 @@ layout: post
 title: '《超自然现象/奥秘探索》'
 categories: book
 tags: book
-featimg: 7bb8bd97gy1g3eiqvonz6j20u015pjvt.jpg
+featimg: bb494d71f2abfdbcf6cd7f040b479966.jpg
 ---
 
 * content

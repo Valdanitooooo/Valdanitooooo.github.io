@@ -3,7 +3,7 @@ layout: post
 title: '《R语言数据高效处理指南》'
 categories: book
 tags: book R
-featimg: 7bb8bd97gy1gji0tjdlwuj20h90m7gts.jpg
+featimg: 961c397d5c14b6168d06edc2c31b6415.jpg
 ---
 
 * content
@@ -13,7 +13,7 @@ featimg: 7bb8bd97gy1gji0tjdlwuj20h90m7gts.jpg
 
 ### tidyverse
 
-![](http://tva2.sinaimg.com/large/7bb8bd97gy1gji15662t3j21480h8145.jpg)
+![](http://p.ananas.chaoxing.com/star3/origin/c42a91fc2dc98783ba3ae727690be6d2.jpg)
 
 
 
