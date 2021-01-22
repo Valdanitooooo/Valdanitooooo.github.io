@@ -37,3 +37,4 @@ gems: [jekyll-paginate]
 paginate: 6
 
 pic_bed_root: http://p.ananas.chaoxing.com/star3/origin/
+static_cdn_root: https://cdn.jsdelivr.net/gh/Valdanitooooo/Valdanitooooo.github.io
