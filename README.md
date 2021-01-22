@@ -2,7 +2,7 @@
 
 - 这是我的个人博客源码。
 - 博客名称：Valdanito's Blog。
-- 博客网址：<https://www.valdanito.top>。
+- 博客地址：<https://www.valdanito.cn>。
 - 基于Jekyll工具构建，模板代码基于<https://github.com/Gaohaoyang/gaohaoyang.github.io>, 做了些简单修改。
 
 ## 模板使用说明

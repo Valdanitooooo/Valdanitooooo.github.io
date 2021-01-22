@@ -14,7 +14,7 @@ type: page
 * 这是我的个人博客，记录所学所想所感
 * 本博客基于Jekyll工具构建，模板代码基于[https://github.com/Gaohaoyang/gaohaoyang.github.io](https://github.com/Gaohaoyang/gaohaoyang.github.io){:target="_blank"}
 * 本站名称：Valdanito's Blog
-* 本站网址：<https://www.valdanito.cn>{:target="_blank"}
+* 本站地址：<https://www.valdanito.cn>{:target="_blank"}
 
 ## 1.个人信息
 
